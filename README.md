@@ -33,8 +33,6 @@ Custom kernel build para Samsung Galaxy A05s baseado no firmware `A057MUBSADYG1`
 
 ### Ferramentas Necessárias
 
-### Ferramentas Necessárias
-
 **Toolchain (já incluída no repo, mas parcialmente removida do GitHub):**
 - Clang r450784e (`kernel_platform/prebuilts/clang/host/linux-x86/clang-r450784e/`)
 - GCC local (`kernel_platform/gcc/`)

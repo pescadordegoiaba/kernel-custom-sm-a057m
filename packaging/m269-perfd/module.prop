@@ -1,0 +1,6 @@
+id=m269_perfd
+name=SM-A057M Kernel Tunables
+version=3.0
+versionCode=20
+author=Kernel A15 project
+description=Configura CPU hotplug/freq cap, GPU KGSL, display runtime e camera perf mode com presets independentes, diagnóstico e WebUI.

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+output=
+root=
+list=
+
+while (($#)); do
+  case "$1" in
+    -o)
+      output="$2"
+      shift 2
+      ;;
+    -C)
+      root="$2"
+      shift 2
+      ;;
+    -l)
+      list="$2"
+      shift 2
+      ;;
+    *)
+      echo "soong_zip wrapper: argumento não suportado: $1" >&2
+      exit 2
+      ;;
+  esac
+done
+
+if [[ -z "${output}" || -z "${root}" || -z "${list}" ]]; then
+  echo "uso: soong_zip -o ARQUIVO -C DIRETORIO -l LISTA" >&2
+  exit 2
+fi
+
+while IFS= read -r path; do
+  printf '%s\n' "${path#"${root}"/}"
+done < "${list}" | (
+  cd "${root}"
+  zip -q -X "${output}" -@
+)

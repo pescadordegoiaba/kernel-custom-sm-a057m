@@ -1,0 +1,83 @@
+
+=== Dispositivo ===
+SM-A057M
+5.15.167-android13-8-31192385-abA057MUBSADYG1
+
+=== Origem de carregamento (first-stage hint) ===
+cpu_hotplug: ramdisk/lib=n/a vendor_dlkm=/vendor_dlkm/lib/modules/cpu_hotplug.ko
+msm_kgsl: ramdisk/lib=n/a vendor_dlkm=/vendor_dlkm/lib/modules/msm_kgsl.ko
+camera: ramdisk/lib=n/a vendor_dlkm=/vendor_dlkm/lib/modules/camera.ko
+
+=== Módulo: cpu_hotplug ===
+Host: /home/gullin/Downloads/Kernel A15/out/kernel-m269-thinlto/dist/cpu_hotplug.ko
+  sha256:      705f847fdf7641d087aea6416647139d92da7e2becf78b11aed6861c5f13f01e
+  srcversion:  n/a
+  vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+  depends: 
+Arquivos na partição:
+  /vendor_dlkm/lib/modules/cpu_hotplug.ko
+  sha256 (primeiro): 2b2c7d840980dc9123478acdbf121619f6b733c277010a85327204d27f59278c
+[FAIL] Arquivo custom presente na partição (cpu_hotplug)
+[PASS] Módulo cpu_hotplug carregado (/proc/modules)
+  /proc/modules: cpu_hotplug 20480 0 - Live 0x0000000000000000 (E)
+[WARN] srcversion sysfs (cpu_hotplug)
+[FAIL] Parâmetro custom presente (cpu_hotplug)
+Resumo cpu_hotplug:
+  Arquivo custom na partição: NÃO
+  Módulo carregado:           SIM
+  srcversion correspondente:  NÃO/N-A
+  Parâmetro custom presente:  NÃO
+
+=== Módulo: msm_kgsl ===
+Host: /home/gullin/Downloads/Kernel A15/out/kernel-m269-thinlto/dist/graphics/msm_kgsl.ko
+  sha256:      69dd22df2bd274153888516782a777d6736382cb2e25a0a2b8125951a878f482
+  srcversion:  n/a
+  vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+  depends: qcom_iommu_util,qcom-scm,msm_performance,clk-qcom,socinfo,qcom-dcvs,qcom_va_minidump,minidump,mdt_loader,secure_buffer,mem_buf_dev
+Arquivos na partição:
+  /vendor_dlkm/lib/modules/msm_kgsl.ko
+  sha256 (primeiro): 1fc33b04d7cc7affc86e85ea986187d4c38bc308192a4a90a808b481adb07b3f
+[FAIL] Arquivo custom presente na partição (msm_kgsl)
+[PASS] Módulo msm_kgsl carregado (/proc/modules)
+  /proc/modules: msm_kgsl 1916928 19 - Live 0x0000000000000000 (OE)
+[WARN] srcversion sysfs (msm_kgsl)
+[FAIL] Parâmetro custom presente (msm_kgsl)
+Resumo msm_kgsl:
+  Arquivo custom na partição: NÃO
+  Módulo carregado:           SIM
+  srcversion correspondente:  NÃO/N-A
+  Parâmetro custom presente:  NÃO
+
+=== Módulo: camera ===
+Host: /home/gullin/Downloads/Kernel A15/out/kernel-m269-thinlto/dist/camera/camera.ko
+  sha256:      9df234f9c372717604e7494372f1d0f746e6f95e2396682c3824d663c8c2364e
+  srcversion:  n/a
+  vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+  depends: leds-qti-flash,cx_ipeak,qcom-scm,mem_buf_dev
+Arquivos na partição:
+  /vendor_dlkm/lib/modules/camera.ko
+  sha256 (primeiro): a172bdc792cb9be977f29a0d81597f152793ec1a5d700cfdfbb1fc39689f7c42
+[FAIL] Arquivo custom presente na partição (camera)
+[PASS] Módulo camera carregado (/proc/modules)
+  /proc/modules: camera 2330624 17 - Live 0x0000000000000000 (OE)
+[WARN] srcversion sysfs (camera)
+Resumo camera:
+  Arquivo custom na partição: NÃO
+  Módulo carregado:           SIM
+  srcversion correspondente:  NÃO/N-A
+
+=== KGSL comportamento (leitura) ===
+governor_call_interval_us: n/a µs (faixa válida: 5000-50000)
+idle_timer: 80 ms
+Nota: validar governor por comportamento (FPS/latência), não só leitura sysfs.
+Teste sugerido: echo 20000 > governor_call_interval_us; observar responsividade GPU.
+
+=== CPU hotplug ===
+cpu_hotplug_level: n/a (0=off experimental, 1=recomendado)
+
+=== Layout partições ===
+
+
+=== Totais ===
+PASS=3 FAIL=5 WARN=3
+Conclusão: módulos custom NÃO totalmente ativos — revisar deploy e flash.

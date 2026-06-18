@@ -1,0 +1,130 @@
+26/05/28 07:13:48
+reason : userrequested
+java.lang.Exception: It is not an exception!! just save the trace for process which called shutdown thread!! ShutdownThread.shutdown
+	at com.android.server.power.ShutdownThread.shutdownInner(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:171)
+	at com.android.server.power.ShutdownThread.reboot(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:49)
+	at com.android.server.statusbar.StatusBarManagerService$$ExternalSyntheticLambda6.run(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:20)
+	at android.os.Handler.handleCallback(Handler.java:959)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loopOnce(Looper.java:257)
+	at android.os.Looper.loop(Looper.java:342)
+	at com.android.server.SystemServer.main(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:795)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:619)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:907)
+07:14:12  2026-05-28 07:14:12-0300 |  REBOOT  |       | REASON: userrequested [-]
+07:14:12  terminating init service start
+07:14:15  terminating init service end
+07:14:15  volume shutdown start
+07:14:15  sync() before umount...
+07:14:16  sync() before umount took
+07:14:16  zram start
+07:14:19  zram end
+07:14:19  TryUmountAndFsck start
+2026-05-28 07:18:45-0300 |    ON    | MP    | A057MUBSADYG1 / apex_updated 
+
+26/05/29 11:24:37
+reason : userrequested
+java.lang.Exception: It is not an exception!! just save the trace for process which called shutdown thread!! ShutdownThread.shutdown
+	at com.android.server.power.ShutdownThread.shutdownInner(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:171)
+	at com.android.server.power.ShutdownThread.reboot(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:49)
+	at com.android.server.statusbar.StatusBarManagerService$$ExternalSyntheticLambda6.run(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:20)
+	at android.os.Handler.handleCallback(Handler.java:959)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loopOnce(Looper.java:257)
+	at android.os.Looper.loop(Looper.java:342)
+	at com.android.server.SystemServer.main(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:795)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:619)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:907)
+11:24:41  2026-05-29 11:24:41-0300 |  REBOOT  |       | REASON: userrequested [-]
+11:24:41  terminating init service start
+11:24:45  terminating init service end
+11:24:45  volume shutdown start
+11:24:45  sync() before umount...
+11:24:45  sync() before umount took
+11:24:45  zram start
+11:24:48  zram end
+11:24:49  TryUmountAndFsck start
+2026-05-29 11:26:24-0300 |    ON    | RP    | A057MUBSADYG1 
+
+26/06/05 22:23:10
+reason : userrequested
+java.lang.Exception: It is not an exception!! just save the trace for process which called shutdown thread!! ShutdownThread.shutdown
+	at com.android.server.power.ShutdownThread.shutdownInner(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:171)
+	at com.android.server.power.ShutdownThread.reboot(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:49)
+	at com.android.server.statusbar.StatusBarManagerService$$ExternalSyntheticLambda6.run(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:20)
+	at android.os.Handler.handleCallback(Handler.java:959)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loopOnce(Looper.java:257)
+	at android.os.Looper.loop(Looper.java:342)
+	at com.android.server.SystemServer.main(qb/98211615 cf7b145fa1f6b8b22d4aca2ef97f52f62898cf97fb81fa54f2fbee984401cde3:795)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:619)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:907)
+22:23:21  2026-06-05 22:23:21-0300 |  REBOOT  |       | REASON: userrequested [-]
+22:23:21  terminating init service start
+22:23:24  terminating init service end
+22:23:24  volume shutdown start
+22:23:25  sync() before umount...
+22:23:25  sync() before umount took
+22:23:25  zram start
+22:23:28  zram end
+22:23:28  TryUmountAndFsck start
+2026-06-05 22:25:16-0300 |    ON    | RP    | A057MUBSADYG1 / apex_updated 
+
+17:29:55  2026-06-14 17:29:55-0300 |  REBOOT  |       | REASON: bootloader [-]
+17:29:56  terminating init service start
+17:29:59  terminating init service end
+17:29:59  volume shutdown start
+17:29:59  sync() before umount...
+17:29:59  sync() before umount took
+17:29:59  zram start
+17:30:02  zram end
+17:30:03  TryUmountAndFsck start
+2026-06-14 17:31:47-0300 |    ON    | RP    | A057MUBSADYG1 / apex_updated 
+
+17:33:37  2026-06-14 17:33:37-0300 |  REBOOT  |       | REASON: download [-]
+17:33:37  terminating init service start
+17:33:41  terminating init service end
+17:33:41  volume shutdown start
+17:33:41  sync() before umount...
+17:33:41  sync() before umount took
+17:33:41  zram start
+17:33:42  zram end
+17:33:43  TryUmountAndFsck start
+2026-06-14 17:39:29-0300 |    ON    | NP    | A057MUBSADYG1 
+
+17:43:06  2026-06-14 17:43:06-0300 |  REBOOT  |       | REASON: download [-]
+17:43:06  terminating init service start
+17:43:07  terminating init service end
+17:43:07  volume shutdown start
+17:43:07  sync() before umount...
+17:43:07  sync() before umount took
+17:43:07  zram start
+17:43:09  zram end
+17:43:10  TryUmountAndFsck start
+2026-06-14 17:56:15-0300 |    ON    | NP    | A057MUBSADYG1 
+
+17:56:36  2026-06-14 17:56:36-0300 |  REBOOT  |       | REASON: recovery [-]
+17:56:36  terminating init service start
+17:56:40  terminating init service end
+17:56:40  volume shutdown start
+17:56:40  sync() before umount...
+17:56:40  sync() before umount took
+17:56:40  zram start
+17:56:40  zram end
+17:56:41  TryUmountAndFsck start
+2026-06-14 18:07:10-0300 |    ON    | RP    | A057MUBSADYG1 
+
+18:09:00  2026-06-14 18:09:00-0300 |  REBOOT  |       | REASON: download [-]
+18:09:00  terminating init service start
+18:09:03  terminating init service end
+18:09:03  volume shutdown start
+18:09:04  sync() before umount...
+18:09:04  sync() before umount took
+18:09:04  zram start
+18:09:06  zram end
+18:09:06  TryUmountAndFsck start
+2026-06-14 18:18:58-0300 |    ON    | MP    | A057MUBSADYG1 
+

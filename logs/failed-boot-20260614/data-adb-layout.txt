@@ -1,0 +1,19 @@
+total 4562
+drwx------ 16 root   root   u:object_r:adb_data_file:s0             3452 1970-06-11 04:35 .
+drwxrwx--x 74 system system u:object_r:system_data_root_file:s0     4096 2026-06-14 18:18 ..
+drwxr-xr-x  5 root   root   u:object_r:adb_data_file:s0             3452 2026-02-19 14:02 .config
+drwxr-xr-x  3 root   root   u:object_r:adb_data_file:s0             3452 2026-04-09 19:17 Box-Brain
+drwxr-xr-x  2 root   root   u:object_r:adb_data_file:s0            20480 2026-03-10 23:25 busybox
+drwxr-xr-x  7 root   root   u:object_r:adb_data_file:s0             3452 2026-01-07 09:23 iunlocker
+drwxr-xr-x  3 root   root   u:object_r:adb_data_file:s0             3452 2026-05-24 21:31 jshook
+drwxrwxrwx  2 root   root   u:object_r:adb_data_file:s0             3452 1969-12-31 23:07 kpm
+drwx------  5 root   root   u:object_r:adb_data_file:s0             3452 2026-01-04 13:08 ksu
+-rwxr-xr-x  1 root   root   u:object_r:adb_data_file:s0          4597048 2026-05-17 11:28 ksud
+drwxrwxrwx  5 root   root   u:object_r:system_file:s0               3452 2026-06-14 18:18 lspd
+lrwxrwxrwx  1 root   root   u:object_r:adb_data_file:s0               32 2026-02-19 13:52 metamodule -> /data/adb/modules/meta-overlayfs
+drwxr-xr-x 11 root   root   u:object_r:adb_data_file:s0             3452 1970-04-06 05:28 modules
+drwx------  2 root   root   u:object_r:system_file:s0               3452 1970-04-06 05:28 modules_update
+dr-xr-xr-x  3 root   root   u:object_r:system_file:s0               3452 2026-06-14 18:18 neozygisk
+drwxrwxrwx  2 root   root   u:object_r:adb_data_file:s0             3452 2026-02-19 14:28 recovery_backups
+drwxr-xr-x  2 root   root   u:object_r:adb_data_file:s0             3452 1970-04-06 05:28 service.d
+drwxr-xr-x  3 root   root   u:object_r:adb_data_file:s0             3452 2026-04-09 19:11 tricky_store

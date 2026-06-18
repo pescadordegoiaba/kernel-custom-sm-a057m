@@ -1,0 +1,14 @@
+# Soft dependencies extracted from modules themselves.
+softdep soc_sleep_stats pre: smem
+softdep q6_notifier_dlkm pre: qcom_q6v5_pas
+softdep msm_video pre: subsys-pil-tz msm-mmrm
+softdep nopmi_chg pre: upm6918_charger sm5602_fg 
+softdep msm_kgsl pre: arm_smmu nvmem_qfprom socinfo
+softdep hx83112f pre: msm_drm
+softdep ilitek pre: msm_drm
+softdep goodixfp pre: msm_drm
+softdep icnl9922c pre: msm_drm
+softdep dwc3_msm pre: phy-generic phy-msm-snps-hs phy-msm-ssusb-qmp eud
+softdep ipam pre: subsys-pil-tz
+softdep ipam pre: qcom-arm-smmu-mod
+softdep leds_qti_tri_led pre: pwm-qti-lpg

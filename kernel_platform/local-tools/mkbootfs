@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Minimal mkbootfs replacement for AOSP kernel builds outside the full tree.
+set -euo pipefail
+
+for root in "$@"; do
+  if [[ ! -d "${root}" ]]; then
+    echo "mkbootfs: not a directory: ${root}" >&2
+    exit 1
+  fi
+  (
+    cd "${root}"
+    find . -print0 | LC_ALL=C sort -z | cpio -o -H newc --quiet --null
+  )
+done

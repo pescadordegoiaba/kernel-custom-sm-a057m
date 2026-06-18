@@ -1,0 +1,4 @@
+zygisk_vector 64 fd=9 dev=fe:2d ino=00431593 sz=1298432
+playintegrityfix 64 fd=10 dev=fe:2d ino=00416857 sz=167936
+zygisk_vector 32 fd=11 dev=fe:2d ino=00431588 sz=901120
+playintegrityfix 32 fd=12 dev=fe:2d ino=00416891 sz=110592

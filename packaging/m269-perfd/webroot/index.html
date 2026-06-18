@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>m269-perfd</title>
+  <link rel="stylesheet" href="https://mui.kernelsu.org/internal/insets.css" />
+  <link rel="stylesheet" href="https://mui.kernelsu.org/internal/colors.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loading" class="loading">Carregando…</div>
+
+  <div id="content" class="hidden">
+    <header>
+      <h1 id="moduleTitle">m269-perfd</h1>
+      <p id="moduleSubtitle">SM-A057M · Kernel Tunables v3</p>
+    </header>
+
+    <nav class="tabs" id="tabNav">
+      <button class="tab active" data-tab="overview">Visão</button>
+      <button class="tab" data-tab="cpu">CPU</button>
+      <button class="tab" data-tab="gpu">GPU</button>
+      <button class="tab" data-tab="display">Tela</button>
+      <button class="tab" data-tab="camera">Câmera</button>
+      <button class="tab" data-tab="diag">Diag</button>
+    </nav>
+
+    <section class="panel active" id="panel-overview">
+      <div class="card">
+        <h2>Runtime no kernel</h2>
+        <div class="runtime-badges">
+          <div class="badge">
+            <span class="badge-label">CPU aplicado</span>
+            <span class="badge-value runtime-display" id="rtCpuLabel">—</span>
+          </div>
+          <div class="badge">
+            <span class="badge-label">GPU aplicado</span>
+            <span class="badge-value runtime-display" id="rtGpuLabel">—</span>
+          </div>
+          <div class="badge">
+            <span class="badge-label">Boot padrão</span>
+            <span class="badge-value runtime-display" id="rtBootLabel">—</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="metric">
+            <span class="label">CPU hotplug</span>
+            <span class="value runtime-display" id="liveHotplug">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">CPU limite</span>
+            <span class="value runtime-display" id="liveCpuCap">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">Governor µs</span>
+            <span class="value runtime-display" id="liveGov">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">GPU idle</span>
+            <span class="value runtime-display" id="liveIdle">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">GPU limite</span>
+            <span class="value runtime-display" id="liveGpu">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">Tela</span>
+            <span class="value runtime-display" id="liveDisplay">—</span>
+          </div>
+          <div class="metric">
+            <span class="label">Câmera</span>
+            <span class="value runtime-display" id="liveCamera">—</span>
+          </div>
+        </div>
+        <div class="actions" style="margin-top:12px">
+          <button id="btnRefresh" class="secondary">Atualizar leitura</button>
+          <button id="btnRestore" class="danger">Restaurar stock</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Log</h2>
+        <pre id="logBox" class="log-box">(sem log)</pre>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-cpu">
+      <div class="card">
+        <h2>Preset CPU</h2>
+        <p class="hint">Controla <code>cpu_hotplug_level</code> e o teto das policies em <code>scaling_max_freq</code>.</p>
+        <div id="cpuPresetChips" class="chips"></div>
+        <p class="hint">Verde = ativo no kernel agora · Roxo = sua seleção</p>
+      </div>
+      <div class="card">
+        <h2>Ajuste detalhado CPU</h2>
+        <div id="cpuHotplugGroup" class="hotplug-group"></div>
+        <div class="field">
+          <label>Limite CPU <span id="cpuCapValue">100%</span></label>
+          <input id="cpuCapSlider" type="range" min="50" max="100" step="5" value="100" />
+        </div>
+        <p id="cpuWarn" class="warn hidden">Nível 0 é experimental — sem mitigação de hotplug térmico.</p>
+        <div class="actions">
+          <button id="btnApplyCpuPreset" class="primary">Aplicar preset</button>
+          <button id="btnApplyCpuCustom" class="secondary">Aplicar custom</button>
+          <button id="btnSaveBootCpu" class="secondary">Salvar CPU como boot</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-gpu">
+      <div class="card">
+        <h2>Preset GPU</h2>
+        <p class="hint">Governor (µs), idle (ms) e teto de clock da Adreno 610.</p>
+        <div id="gpuPresetChips" class="chips"></div>
+      </div>
+      <div class="card">
+        <h2>Ajuste detalhado GPU</h2>
+        <div class="field">
+          <label>Governor interval <span id="govValue">10000 µs</span></label>
+          <input id="govSlider" type="range" min="5000" max="50000" step="500" value="10000" />
+        </div>
+        <div class="field">
+          <label>GPU idle timer <span id="idleValue">80 ms</span></label>
+          <input id="idleSlider" type="range" min="20" max="500" step="5" value="80" />
+        </div>
+        <div class="field">
+          <label>Limite GPU <span id="gpuValue">100%</span></label>
+          <input id="gpuSlider" type="range" min="50" max="100" step="5" value="100" />
+        </div>
+        <div class="field">
+          <label>GPU bias <span id="gpuModValue">100%</span></label>
+          <input id="gpuModSlider" type="range" min="50" max="150" step="5" value="100" />
+        </div>
+        <div class="actions">
+          <button id="btnApplyGpuPreset" class="primary">Aplicar preset</button>
+          <button id="btnApplyGpuCustom" class="secondary">Aplicar custom</button>
+          <button id="btnSaveBootGpu" class="secondary">Salvar GPU como boot</button>
+          <button id="btnSaveBootBoth" class="secondary full">Salvar CPU+GPU como boot</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-display">
+      <div class="card">
+        <h2>Preset Tela</h2>
+        <p class="hint">Usa settings Android para refresh e <code>wm size</code> para render scale lógico. Não altera o timing físico do painel.</p>
+        <div id="displayPresetChips" class="chips"></div>
+      </div>
+      <div class="card">
+        <h2>Ajuste detalhado Tela</h2>
+        <div class="field">
+          <label>Refresh <span id="displayRefreshValue">60 Hz</span></label>
+          <input id="displayRefreshSlider" type="range" min="0" max="90" step="30" value="60" />
+        </div>
+        <div class="field">
+          <label>Render scale <span id="displayScaleValue">100%</span></label>
+          <input id="displayScaleSlider" type="range" min="50" max="100" step="5" value="100" />
+        </div>
+        <div class="actions">
+          <button id="btnApplyDisplayPreset" class="primary">Aplicar preset</button>
+          <button id="btnApplyDisplayCustom" class="secondary">Aplicar custom</button>
+          <button id="btnSaveBootDisplay" class="secondary full">Salvar tela como boot</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-camera">
+      <div class="card">
+        <h2>Preset Câmera</h2>
+        <p class="hint">Controla <code>/sys/module/camera/parameters/cam_perf_mode</code> quando o camera.ko custom estiver carregado.</p>
+        <div id="cameraPresetChips" class="chips"></div>
+        <div class="actions">
+          <button id="btnApplyCameraPreset" class="primary">Aplicar preset</button>
+          <button id="btnSaveBootCamera" class="secondary">Salvar câmera como boot</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-diag">
+      <div class="card">
+        <h2>Diagnóstico</h2>
+        <p class="hint">Leitura rápida de CPU/GPU/tela/câmera/touch sem modificar estado.</p>
+        <div class="actions">
+          <button id="btnRunDiag" class="primary full">Executar diagnóstico</button>
+        </div>
+        <pre id="diagBox" class="log-box diag-box">(não executado)</pre>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

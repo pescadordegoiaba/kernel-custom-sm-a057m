@@ -1,0 +1,171 @@
+Auditoria kernel release / vermagic / KMI
+Root:   /home/gullin/Downloads/Kernel A15
+Out:    /home/gullin/Downloads/Kernel-A15-build/out/kernel-m269-thinlto
+Dist:   /home/gullin/Downloads/Kernel A15/out/kernel-m269-thinlto/dist
+
+== Releases (5 níveis + alvo/stock) ==
+GKI_SOURCE_RELEASE:       5.15.167
+GKI_OUTPUT_RELEASE:       5.15.167-android13-8-31192385-abA057MUBSADYG1
+IMAGE_OUTPUT_RELEASE:     5.15.167-android13-8-31192385-abA057MUBSADYG1
+TARGET_IMAGE_RELEASE:     5.15.167-android13-8-31192385-abA057MUBSADYG1  (IMAGE_OUTPUT_RELEASE (dist/Image))
+STOCK_REFERENCE_RELEASE:  5.15.167-android13-8-31192385-abA057MUBSADYG1  (STOCK_MODULE_VERMAGIC (firmware A057MUBSADYG1))
+VENDOR_SOURCE_RELEASE:    5.15.167
+VENDOR_OUTPUT_RELEASE:    5.15.167-android13-8-31192385-abA057MUBSADYG1
+
+Regra central: MODULE_VERMAGIC == TARGET_IMAGE_RELEASE
+Compatibilidade stock: TARGET_IMAGE_RELEASE == STOCK_REFERENCE_RELEASE
+RUNNING_DEVICE_RELEASE: 5.15.167-android13-8-31192385-abA057MUBSADYG1
+  Linux localhost 5.15.167-android13-8-31192385-abA057MUBSADYG1 #1 SMP PREEMPT Wed Jan 1 00:00:00 UTC 2025 aarch64 Toybox
+
+== kernel.release / utsrelease.h ==
+--- gki_kernel/common/include/config/kernel.release ---
+5.15.167-android13-8-31192385-abA057MUBSADYG1
+
+--- gki_kernel/common/include/generated/utsrelease.h ---
+#define UTS_RELEASE "5.15.167-android13-8-31192385-abA057MUBSADYG1"
+
+--- msm-kernel/include/config/kernel.release ---
+5.15.167-android13-8-31192385-abA057MUBSADYG1
+
+--- msm-kernel/include/generated/utsrelease.h ---
+#define UTS_RELEASE "5.15.167-android13-8-31192385-abA057MUBSADYG1"
+
+
+== MODULE_VERMAGIC ==
+STOCK_MODULE_VERMAGIC (host vendor_boot):
+  5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+STOCK_MODULE_VERMAGIC (device carregado):
+  5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+  cpu_hotplug:
+    vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+    vs TARGET_IMAGE_RELEASE: OK (exato)
+  msm_kgsl:
+    vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+    vs TARGET_IMAGE_RELEASE: OK (exato)
+  camera:
+    vermagic: 5.15.167-android13-8-31192385-abA057MUBSADYG1 SMP preempt mod_unload modversions aarch64
+    vs TARGET_IMAGE_RELEASE: OK (exato)
+
+== KMI / símbolos ==
+vmlinux.symvers (GKI): /home/gullin/Downloads/Kernel-A15-build/out/kernel-m269-thinlto/gki_kernel/common/Module.symvers
+Module.symvers (vendor): /home/gullin/Downloads/Kernel-A15-build/out/kernel-m269-thinlto/msm-kernel/Module.symvers
+
+== module_layout CRC (pré-flash) ==
+--- cpu_hotplug.ko (FIRST_STAGE (vendor_boot)) ---
+  depends: 
+  símbolos indefinidos (detalhe):
+    (nenhum símbolo indefinido fora de Module.symvers)
+  símbolos vs GKI Module.symvers: OK
+--- msm_kgsl.ko (SECOND_STAGE (vendor_dlkm)) ---
+  depends: qcom_iommu_util,qcom-scm,msm_performance,clk-qcom,socinfo,qcom-dcvs,qcom_va_minidump,minidump,mdt_loader,secure_buffer,mem_buf_dev
+  símbolos indefinidos (detalhe):
+    (nenhum símbolo indefinido fora de Module.symvers)
+  símbolos vs GKI Module.symvers: OK
+--- camera.ko (SECOND_STAGE (vendor_dlkm)) ---
+  depends: leds-qti-flash,cx_ipeak,qcom-scm,mem_buf_dev
+  símbolos indefinidos (detalhe):
+    (nenhum símbolo indefinido fora de Module.symvers)
+  símbolos vs GKI Module.symvers: OK
+  cpu_hotplug: module_layout CRC indisponível (modprobe) — registrar, não bloqueia BUILD_SAFE
+  msm_kgsl: module_layout CRC indisponível (modprobe) — registrar, não bloqueia BUILD_SAFE
+  camera: module_layout CRC indisponível (modprobe) — registrar, não bloqueia BUILD_SAFE
+  module_layout: OK ou pendente (CRC indisponível não bloqueia gate básico)
+
+== CONFIG modpost / GKI ==
+--- gki_kernel/common/.config ---
+CONFIG_LTO_CLANG=y
+CONFIG_LTO_CLANG_THIN=y
+CONFIG_CFI_CLANG=y
+CONFIG_MODULES=y
+CONFIG_MODULE_UNLOAD=y
+CONFIG_MODVERSIONS=y
+CONFIG_TRIM_UNUSED_KSYMS=y
+--- msm-kernel/.config ---
+CONFIG_LTO_CLANG=y
+CONFIG_LTO_CLANG_THIN=y
+CONFIG_CFI_CLANG=y
+CONFIG_MODULES=y
+CONFIG_MODULE_UNLOAD=y
+CONFIG_MODVERSIONS=y
+  Nota: gate básico OK não substitui CRC completo de todos os tipos (KBUILD_SYMTYPES=1 se divergir).
+
+== Funcionalidades custom obrigatórias ==
+  CONFIG_KSU=y: OK
+  CONFIG_KPM=y: OK
+  CONFIG_KSU_MANUAL_SU=y: OK
+  KernelSU símbolo kernelsu_init: OK
+  KernelSU símbolo kernelsu_exit: OK
+  KernelSU símbolo apply_kernelsu_rules: OK
+  cpu_hotplug_level (limite global 0-3): OK
+  governor_call_interval_us (5000-50000 us): OK
+  m269-perfd compatível com shell Android: OK
+
+== Classificação ==
+DIAGNÓSTICO: BUILD_SAFE
+
+BUILD_SAFE: SIM
+  TARGET_IMAGE_RELEASE conhecido:           SIM
+  TARGET_IMAGE_RELEASE == stock (preservar): SIM
+  módulos custom == TARGET_IMAGE_RELEASE:   SIM
+  KMI básico (+ module_layout):             SIM
+
+  Estado: BUILD COMPATÍVEL NO HOST — elegível para deploy/empacotamento.
+  NÃO equivale a flash seguro nem runtime validado.
+
+== PACK_SAFE (imagens finais empacotadas) ==
+  boot.img:          100663296 bytes
+  vendor_boot.img:   100663296 bytes
+  vendor_dlkm.img:   835686400 bytes
+  boot.img AVB: presente
+  vendor_boot.img AVB: presente
+  vendor_dlkm.img AVB: presente
+  vendor_dlkm AVB hashtree: presente
+  vendor_dlkm FEC: 2 raízes
+  vendor_dlkm AVB/hashtree: verificado
+  cpu_hotplug em vendor_boot.img: vermagic OK
+  Image dentro de boot.img: OK
+  DTB vendor_boot: stock preservado
+  vendor_dlkm identidade: SM-A057M/A057MUBSADYG1
+  cpu_hotplug em vendor_dlkm.img: vermagic OK
+  cpu_hotplug em vendor_dlkm.img: binário exato
+  msm_kgsl em vendor_dlkm.img: vermagic OK
+  msm_kgsl em vendor_dlkm.img: binário exato
+  camera em vendor_dlkm.img: vermagic OK
+  camera em vendor_dlkm.img: binário exato
+  PACK_SAFE: SIM
+
+== FLASH_LAYOUT_SAFE (partições / slot / AVB) ==
+  Relatório: /home/gullin/Downloads/Kernel A15/out/flash/flash_layout_report.txt
+  vendor_dlkm identificado: SIM
+  Slot identificado:        SIM
+  Bootloader desbloqueado:  NÃO CONFIRMADO
+  Tamanhos validados:       SIM
+  FLASH_LAYOUT_SAFE: PENDENTE — layout confirmado; estado bootloader/AVB não confirmado
+
+== RUNTIME_VALIDATED (boot + módulos carregados) ==
+  uname -r: 5.15.167-android13-8-31192385-abA057MUBSADYG1
+  sys.boot_completed: 1
+  kernel release: OK
+  KERNEL_RUNTIME_VALIDATED: SIM
+  cpu_hotplug: carregado
+  msm_kgsl: carregado
+  camera: carregado
+  cpu_hotplug: binário ativo na partição NÃO corresponde ao custom
+  msm_kgsl: binário ativo na partição NÃO corresponde ao custom
+  camera: binário ativo na partição NÃO corresponde ao custom
+  cpu_hotplug_level: AUSENTE
+  governor_call_interval_us: AUSENTE
+  RUNTIME_VALIDATED: NÃO — kernel iniciou; DLKM custom e parâmetros ainda pendentes
+
+== Gates de deploy / flash ==
+BUILD_SAFE:          SIM
+PACK_SAFE:           SIM
+FLASH_LAYOUT_SAFE:   PENDENTE
+KERNEL_RUNTIME_VALIDATED: SIM
+RUNTIME_VALIDATED:   NÃO
+
+FLASH_READY:         NÃO
+
+  Build compatível no host (BUILD_SAFE: SIM).
+  Imagens empacotadas; falta confirmar layout/slot ou estado bootloader/AVB.
+  Consulte: out/flash/flash_layout_report.txt

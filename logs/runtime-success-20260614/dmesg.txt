@@ -1,0 +1,1459 @@
+[  393.950935] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  393.950954] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  393.950982] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  394.605250] !@   8,0 r 347048 9938292 w 24075 483908 d 150 337860 f 3858 5798 iot 149540 0 th 0 0 0 pt 0 inp 0 0 394.602
+[  395.130330] set AF for addr 7576048218
+[  395.186532] set AF for addr 7576048288
+[  395.223929] KernelSU: ksu fd installed: 5 for pid 17330
+[  395.223949] KernelSU: [17330] install ksu fd: 5
+[  395.223964] kpm: Stub function called (sukisu_kpm_version). buffer=000000001979f56c
+[  395.224696] KernelSU: ksu fd released
+[  395.236796] <sm5602> [fg_check_reg_init_need,2877] FG_OP_STATUS = 0x8010
+[  395.237456] <sm5602> [fg_check_reg_init_need,2885] param_ver = 0x707, common_param_version = 0x7, battery_param_version = 0x7
+[  395.237481] <sm5602> [fg_check_reg_init_need,2891] SM_FG_REG_FG_OP_STATUS : 0x8010 , return FALSE NO init need
+[  395.238185] <sm5602> [fg_init,4296] BAT_CAP = 0x62 : 0x2314
+[  395.239189] <sm5602> [fg_refresh_status,2719] batt_present=1
+[  395.239586] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  395.239980] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  395.240373] <sm5602> [fg_read_ocv,919] ocv=4171(0x2160)
+[  395.240767] <sm5602> [fg_read_volt,1219] volt = 4297(0x440b)
+[  395.241174] <sm5602> [fg_read_current,1341] curr = 372(0x2fa)
+[  395.241572] <sm5602> [fg_get_cycle,1239] cycle = 1(0x201)
+[  395.241972] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffef96
+[  395.242363] <sm5602> [fg_read_current,1341] curr = 372(0x2fa)
+[  395.242390] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  395.242411] <sm5602> [interp_adc_to_meas,987] FFFFEF96, (FFFFEF85, FFFFF061), (550000, 555000), 550386
+
+[  395.242435] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  395.242453] <sm5602> [interp_meas_to_adc,953] 550386, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEF95
+
+[  395.242476] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffef95, temp_mv = 550386, code_meas = 550386, curr = 372, rtrace = 0
+[  395.242501] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xef96, val = 0xffffef95, temp = 29
+[  395.242519] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  395.242535] <sm5602> [calculate_average_temperature,1010] last_change_time = -1470323415, time_since_last_change_sec = 1573, delta_time = 1573
+[  395.242624] <sm5602> [calculate_average_temperature,1027] last_change_time = 103093199, time_since_last_change_sec = 1573, delta_time = 1573
+[  395.242645] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 5
+[  395.242670] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  395.243487] <sm5602> [fg_read_rmc,1383] rmc = 4019(0x2028)
+[  395.244377] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.244407] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.244427] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  395.244450] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  395.244472] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  395.244872] <sm5602> [fg_vbatocv_check,1646] sm->batt_curr (372), sm->is_charging (1), sm->top_off (580), sm->batt_soc (924), sm->topoff_margin (100)
+[  395.245276] <sm5602> [fg_vbatocv_check,1724] mode change to RS a mode
+[  395.245773] <sm5602> [fg_cal_carc,1802] CURR_IN_OFFSET [0x75] = 0x0
+[  395.245800] <sm5602> [fg_cal_carc,1830] <0 6 1 11 -1 0 6 1 9 1>, temp_fg = 29 ,p_curr_cal = 0x80, n_curr_cal = 0x80, batt_temp = 29
+[  395.246070] <sm5602> [fg_cal_carc,1868] write CURR_IN_SLOPE [0x76] = 0x8080
+[  395.246098] <sm5602> [fg_cal_carc,1879] <0 2 1 2 1 1 2 3 2 3>, p_curr_cal = 0x80, n_curr_cal = 0x80, curr_cal = 0x8080
+[  395.246365] <sm5602> [fg_cal_carc,1886] write SM_FG_REG_VOL_COMP [0x96] = 0x0
+[  395.246636] <sm5602> [fg_cal_carc,1894] write SM_FG_REG_CURR_OFFSET [0x76] = 0x0
+[  395.246902] <sm5602> [fg_cal_carc,1902] write SM_FG_REG_CURR_SLOPE [0x18] = 0x8080
+[  395.250628] <sm5602> [fg_cal_carc,1920] 0x06=0x2160, 0x1E=0x707, 0x28=0x1ff, 0x80=0x15, 0x83=0x40a, 0x84=0x2028, 0x86=0x2265, 0x87=0x2fc, 0x93=0x0, 0x9C=0x121
+[  395.250661] <sm5602> [fg_refresh_status,2761] >>>>UISOC: 993,RSOC:924, Volt:4297, Current:372, Temperature:29, OCV:4171, RMC:4019
+[  395.678799] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  395.684936] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffef96
+[  395.685433] <sm5602> [fg_read_current,1341] curr = 372(0x2fa)
+[  395.685470] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  395.685489] <sm5602> [interp_adc_to_meas,987] FFFFEF96, (FFFFEF85, FFFFF061), (550000, 555000), 550386
+
+[  395.685512] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  395.685529] <sm5602> [interp_meas_to_adc,953] 550386, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEF95
+
+[  395.685553] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffef95, temp_mv = 550386, code_meas = 550386, curr = 372, rtrace = 0
+[  395.685577] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xef96, val = 0xffffef95, temp = 29
+[  395.685596] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  395.685613] <sm5602> [calculate_average_temperature,1010] last_change_time = 103093199, time_since_last_change_sec = 442, delta_time = 442
+[  395.685633] <sm5602> [calculate_average_temperature,1027] last_change_time = 546101793, time_since_last_change_sec = 442, delta_time = 442
+[  395.685653] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 6
+[  395.685678] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  395.686150] <sm5602> [fg_read_current,1341] curr = 372(0x2fa)
+[  395.686286] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  395.686864] <sm5602> [fg_read_volt,1219] volt = 4296(0x4400)
+[  395.686893] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4296 batt_curr:372
+[  395.686914] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  395.686944] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  395.687496] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  395.687523] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  395.687539] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  395.687555] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  395.687579] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  395.687609] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  395.687633] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  395.687667] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  395.688338] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  395.688366] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  395.688390] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  395.689040] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  395.689068] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  395.689099] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  395.689128] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  395.689148] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  395.689583] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  395.689607] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  395.689623] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  395.870768] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  395.871299] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  395.871327] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  395.872106] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.872135] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.872154] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  395.872175] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  395.872197] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  395.872218] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  395.872600] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  395.873338] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.873365] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.873384] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  395.873865] <sm5602> [fg_read_current,1341] curr = 371(0x2f7)
+[  395.873892] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=371000, onlion=1,soc=99
+[  395.875104] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  395.875146] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  395.875905] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.875931] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.875951] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  395.875972] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  395.875995] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  395.876015] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  395.876399] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  395.877140] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.877165] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.877184] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  395.877930] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  395.877955] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  395.877975] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  395.878000] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  395.878021] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  396.606091] !@   8,0 r 347048 9938292 w 24078 483924 d 150 337860 f 3858 5798 iot 149548 0 th 0 0 0 pt 0 inp 0 0 396.603
+[  396.606437] !@ Read_top(KB): sh(17325) 20
+[  396.606516] !@ Write_top(KB): kworker/u16:3(197) 16 kworker/u16:7(201) 8
+[  396.766833] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  396.766908] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  396.766939] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  396.766959] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  396.766982] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  396.767017] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  396.767039] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  396.767065] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  396.767091] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  396.767123] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  396.767524] <nopmichg> [nopmi_chg_workfunc,3525]  nopmi_usb_online=1
+[  397.023435] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  397.023501] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  397.023535] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  397.023553] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  397.023584] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  397.301274] set AF for addr 75760482f8
+[  397.695151] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  397.700281] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffef98
+[  397.700763] <sm5602> [fg_read_current,1341] curr = 371(0x2f7)
+[  397.700796] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  397.700815] <sm5602> [interp_adc_to_meas,987] FFFFEF98, (FFFFEF85, FFFFF061), (550000, 555000), 550431
+
+[  397.700838] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  397.700855] <sm5602> [interp_meas_to_adc,953] 550431, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEF97
+
+[  397.700878] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffef97, temp_mv = 550431, code_meas = 550431, curr = 371, rtrace = 0
+[  397.700902] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xef98, val = 0xffffef97, temp = 29
+[  397.700921] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  397.700936] <sm5602> [calculate_average_temperature,1010] last_change_time = 546101793, time_since_last_change_sec = 2015, delta_time = 2015
+[  397.700957] <sm5602> [calculate_average_temperature,1027] last_change_time = -1733541598, time_since_last_change_sec = 2015, delta_time = 2015
+[  397.700977] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 7
+[  397.701002] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  397.701467] <sm5602> [fg_read_current,1341] curr = 371(0x2f7)
+[  397.701591] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  397.701982] <sm5602> [fg_read_volt,1219] volt = 4298(0x4416)
+[  397.702011] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4298 batt_curr:371
+[  397.702031] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  397.702059] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  397.702517] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4277
+[  397.702834] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  397.702856] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  397.702874] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  397.702897] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4277
+[  397.702928] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  397.702951] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  397.702987] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  397.704081] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  397.704113] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  397.704140] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  397.704878] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  397.704912] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  397.704943] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  397.704972] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  397.704993] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  397.705428] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  397.705453] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  397.705469] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  397.886756] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  397.887296] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  397.887321] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  397.888103] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  397.888130] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  397.888149] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  397.888173] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  397.888196] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  397.888217] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  397.888597] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  397.889340] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  397.889365] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  397.889384] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  397.889789] <sm5602> [fg_read_current,1341] curr = 371(0x2f7)
+[  397.889817] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=371000, onlion=1,soc=99
+[  397.891016] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  397.891045] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  397.891789] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  397.891815] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  397.891834] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  397.891854] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  397.891876] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  397.891897] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  397.892272] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  397.893098] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  397.893126] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  397.893145] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  397.893890] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  397.893915] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  397.893935] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  397.893959] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  397.893978] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  398.179612] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  398.179683] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  398.180339] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  398.180353] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  398.180362] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  398.180373] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  398.180383] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  398.180394] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  398.180713] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  398.181333] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  398.181345] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  398.181353] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  398.181365] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  398.181374] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  398.607756] !@   8,0 r 347069 9938620 w 24078 483924 d 150 337860 f 3858 5798 iot 149568 0 th 0 0 0 pt 0 inp 0 0 398.604
+[  399.327161] msm_watchdog_data - pet: 399.327152 / last_pet: 389.855323 (delta: 9.471829)
+[  399.328070] (virq:irq_count)- GICv3:IPI(1):1250776 GICv3:arch_timer(11):609066 GICv3:ufshcd(40):300924 GICv3:IPI(6):213119 GICv3:IPI(2):138168 GICv3:glink-native-rpm-glink(33):93577 GICv3:kgsl_3d0_irq(48):31167 GICv3:msm-vidc(166):30637 GICv3:glink-native-adsp(216):29756 GICv3:msm_drm(167):19801 
+[  399.328227] (cpu:irq_count)- 0:520353 1:428069 2:404251 3:380694 4:369877 5:219218 6:225777 7:229683 
+[  399.328295] (ipi:irq_count)- 0:1250776 1:138168 2:0 3:0 4:130 5:213119 6:0 
+[  399.711237] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  399.716557] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefa4
+[  399.717047] <sm5602> [fg_read_current,1341] curr = 369(0x2f4)
+[  399.717084] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  399.717103] <sm5602> [interp_adc_to_meas,987] FFFFEFA4, (FFFFEF85, FFFFF061), (550000, 555000), 550704
+
+[  399.717127] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  399.717145] <sm5602> [interp_meas_to_adc,953] 550704, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFA3
+
+[  399.717168] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefa3, temp_mv = 550704, code_meas = 550704, curr = 369, rtrace = 0
+[  399.717192] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefa4, val = 0xffffefa3, temp = 29
+[  399.717210] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  399.717227] <sm5602> [calculate_average_temperature,1010] last_change_time = -1733541598, time_since_last_change_sec = 2016, delta_time = 2016
+[  399.717247] <sm5602> [calculate_average_temperature,1027] last_change_time = 282748454, time_since_last_change_sec = 2016, delta_time = 2016
+[  399.717267] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 0
+[  399.717292] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  399.717759] <sm5602> [fg_read_current,1341] curr = 369(0x2f4)
+[  399.717888] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  399.718292] <sm5602> [fg_read_volt,1219] volt = 4297(0x440a)
+[  399.718321] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4297 batt_curr:369
+[  399.718341] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  399.718368] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  399.718914] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4277
+[  399.718942] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  399.718960] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  399.718977] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  399.719000] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4277
+[  399.719032] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  399.719057] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  399.719092] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  399.719756] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  399.719783] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  399.719807] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  399.720450] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  399.720478] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  399.720508] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  399.720537] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  399.720557] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  399.720975] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  399.721000] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  399.721015] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  399.839185] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  399.839255] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  399.839286] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  399.839306] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  399.839329] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  399.839364] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  399.839386] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  399.839414] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  399.839439] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  399.839465] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  399.902838] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  399.903391] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  399.903415] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  399.904193] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  399.904221] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  399.904240] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  399.904263] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  399.904286] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  399.904307] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  399.904691] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  399.905431] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  399.905455] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  399.905474] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  399.905879] <sm5602> [fg_read_current,1341] curr = 369(0x2f3)
+[  399.905907] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=369000, onlion=1,soc=99
+[  399.907051] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  399.907079] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  399.907827] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  399.907852] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  399.907870] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  399.907893] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  399.907915] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  399.907937] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  399.908314] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  399.909048] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  399.909072] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  399.909090] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  399.909827] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  399.909854] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  399.909950] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  399.909977] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  399.909997] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  400.095189] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  400.095266] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  400.095292] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  400.095311] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  400.095341] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  400.234063] set AF for addr 7576048368
+[  400.289188] set AF for addr 75760483d8
+[  400.325430] KernelSU: ksu fd installed: 5 for pid 17351
+[  400.325457] KernelSU: [17351] install ksu fd: 5
+[  400.325478] kpm: Stub function called (sukisu_kpm_version). buffer=0000000073cd5686
+[  400.328306] KernelSU: ksu fd released
+[  400.608923] !@   8,0 r 347141 9939776 w 24079 483976 d 150 337860 f 3858 5798 iot 149640 0 th 0 0 0 pt 0 inp 0 0 400.606
+[  400.609265] !@ Read_top(KB): .gms.persistent(4515) 1120 gle.android.gms(5354) 364
+[  400.609348] !@ Write_top(KB): kworker/u16:5(199) 52
+[  401.727189] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  401.732348] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffef9d
+[  401.732836] <sm5602> [fg_read_current,1341] curr = 369(0x2f3)
+[  401.732873] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  401.732892] <sm5602> [interp_adc_to_meas,987] FFFFEF9D, (FFFFEF85, FFFFF061), (550000, 555000), 550545
+
+[  401.732915] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  401.732934] <sm5602> [interp_meas_to_adc,953] 550545, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEF9C
+
+[  401.732956] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffef9c, temp_mv = 550545, code_meas = 550545, curr = 369, rtrace = 0
+[  401.732981] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xef9d, val = 0xffffef9c, temp = 29
+[  401.733000] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  401.733016] <sm5602> [calculate_average_temperature,1010] last_change_time = 282748454, time_since_last_change_sec = 2015, delta_time = 2015
+[  401.733036] <sm5602> [calculate_average_temperature,1027] last_change_time = -1996429156, time_since_last_change_sec = 2015, delta_time = 2015
+[  401.733057] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 1
+[  401.733081] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  401.733551] <sm5602> [fg_read_current,1341] curr = 369(0x2f3)
+[  401.733677] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  401.734075] <sm5602> [fg_read_volt,1219] volt = 4297(0x440a)
+[  401.734102] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4297 batt_curr:369
+[  401.734123] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  401.734151] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  401.734724] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  401.734748] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  401.734767] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  401.734783] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  401.734807] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  401.734837] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  401.734861] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  401.734895] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  401.735560] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  401.735587] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  401.735614] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  401.736281] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  401.736310] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  401.736340] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  401.736370] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  401.736389] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  401.737291] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  401.737315] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  401.737332] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  401.886781] <nopmichg> [nopmi_chg_workfunc,3525]  nopmi_usb_online=1
+[  401.919400] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  401.919934] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  401.919962] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  401.920743] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  401.920770] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  401.920790] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  401.920814] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  401.920837] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  401.920859] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  401.921242] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  401.921981] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  401.922006] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  401.922026] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  401.922427] <sm5602> [fg_read_current,1341] curr = 366(0x2ee)
+[  401.922455] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=366000, onlion=1,soc=99
+[  401.923566] <sm5602> [fg_read_soc,885] soc=924(0x5c7b)
+[  401.923595] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 993
+[  401.924343] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  401.924369] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  401.924388] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  401.924409] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  401.924431] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  401.924453] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 993, val->intval: 99
+[  401.924830] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  401.925565] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  401.925591] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  401.925609] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  401.926350] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  401.926375] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  401.926394] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  401.926419] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  401.926439] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  402.307545] set AF for addr 7576048448
+[  402.611055] !@   8,0 r 347144 9940328 w 24079 483976 d 150 337860 f 3858 5798 iot 149664 0 th 0 0 0 pt 0 inp 0 0 402.608
+[  402.910829] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  402.910902] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  402.910933] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  402.910953] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  402.910978] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  402.911013] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  402.911036] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  402.911063] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  402.911088] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  402.911118] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  403.167137] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  403.167197] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  403.167216] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  403.167225] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  403.167238] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  403.191746] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  403.191789] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:993,ret = 994
+[  403.192468] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.192484] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.192492] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  403.192501] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  403.192509] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  403.192518] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  403.192820] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  403.193405] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.193415] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.193422] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  403.193431] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  403.193438] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  403.742836] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  403.749827] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefa8
+[  403.750324] <sm5602> [fg_read_current,1341] curr = 366(0x2ed)
+[  403.750356] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  403.750375] <sm5602> [interp_adc_to_meas,987] FFFFEFA8, (FFFFEF85, FFFFF061), (550000, 555000), 550795
+
+[  403.750399] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  403.750417] <sm5602> [interp_meas_to_adc,953] 550795, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFA7
+
+[  403.750440] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefa7, temp_mv = 550795, code_meas = 550795, curr = 366, rtrace = 0
+[  403.750464] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefa8, val = 0xffffefa7, temp = 29
+[  403.750482] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  403.750498] <sm5602> [calculate_average_temperature,1010] last_change_time = -1996429156, time_since_last_change_sec = 2017, delta_time = 2017
+[  403.750518] <sm5602> [calculate_average_temperature,1027] last_change_time = 21052354, time_since_last_change_sec = 2017, delta_time = 2017
+[  403.750539] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 2
+[  403.750924] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  403.751432] <sm5602> [fg_read_current,1341] curr = 366(0x2ed)
+[  403.751568] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  403.752028] <sm5602> [fg_read_volt,1219] volt = 4297(0x4404)
+[  403.752060] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4297 batt_curr:366
+[  403.752081] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  403.752108] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  403.752597] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  403.752626] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  403.752644] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  403.752661] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  403.752685] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  403.752718] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  403.752743] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  403.752777] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  403.753430] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  403.753458] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  403.753483] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  403.754126] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  403.754154] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  403.754184] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  403.754212] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  403.754232] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  403.754665] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  403.754689] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  403.754705] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  403.934820] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  403.935366] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  403.935398] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  403.936200] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.936230] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.936250] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  403.936273] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  403.936297] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  403.936317] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  403.936706] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  403.937454] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.937479] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.937498] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  403.937905] <sm5602> [fg_read_current,1341] curr = 366(0x2ee)
+[  403.937933] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=366000, onlion=1,soc=99
+[  403.939146] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  403.939176] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  403.939925] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.939950] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.939970] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  403.939992] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  403.940014] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  403.940035] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  403.940414] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  403.941156] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.941181] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.941200] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  403.941947] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  403.941974] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  403.941995] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  403.942018] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  403.942039] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  404.612509] !@   8,0 r 347144 9940328 w 24081 484060 d 150 337860 f 3858 5798 iot 149676 0 th 0 0 0 pt 0 inp 0 0 404.609
+[  404.612864] !@ Read_top(KB): kworker/u16:0(8) 512 imbrasil.meutim(16909) 40
+[  404.612948] !@ Write_top(KB): kworker/u16:0(8) 84
+[  405.339146] set AF for addr 75760484b8
+[  405.393925] set AF for addr 7576048528
+[  405.430222] KernelSU: ksu fd installed: 5 for pid 17366
+[  405.430249] KernelSU: [17366] install ksu fd: 5
+[  405.430269] kpm: Stub function called (sukisu_kpm_version). buffer=000000007db912ba
+[  405.432366] KernelSU: ksu fd released
+[  405.476741] <sm5602> [fg_check_reg_init_need,2877] FG_OP_STATUS = 0x8010
+[  405.477189] <sm5602> [fg_check_reg_init_need,2885] param_ver = 0x707, common_param_version = 0x7, battery_param_version = 0x7
+[  405.477216] <sm5602> [fg_check_reg_init_need,2891] SM_FG_REG_FG_OP_STATUS : 0x8010 , return FALSE NO init need
+[  405.477848] <sm5602> [fg_init,4296] BAT_CAP = 0x62 : 0x2314
+[  405.478792] <sm5602> [fg_refresh_status,2719] batt_present=1
+[  405.479196] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.479595] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.479990] <sm5602> [fg_read_ocv,919] ocv=4172(0x2162)
+[  405.480385] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.480792] <sm5602> [fg_read_current,1341] curr = 365(0x2ec)
+[  405.481190] <sm5602> [fg_get_cycle,1239] cycle = 1(0x201)
+[  405.481592] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.481985] <sm5602> [fg_read_current,1341] curr = 365(0x2ec)
+[  405.482012] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.482031] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.482055] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.482073] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.482095] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 365, rtrace = 0
+[  405.482119] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.482138] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.482154] <sm5602> [calculate_average_temperature,1010] last_change_time = 21052354, time_since_last_change_sec = 1731, delta_time = 1731
+[  405.482175] <sm5602> [calculate_average_temperature,1027] last_change_time = 1752709124, time_since_last_change_sec = 1731, delta_time = 1731
+[  405.482195] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 3
+[  405.482220] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.482615] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.483481] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.483511] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.483531] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.483553] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.483576] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.483976] <sm5602> [fg_vbatocv_check,1646] sm->batt_curr (365), sm->is_charging (1), sm->top_off (580), sm->batt_soc (925), sm->topoff_margin (100)
+[  405.484378] <sm5602> [fg_vbatocv_check,1724] mode change to RS a mode
+[  405.484874] <sm5602> [fg_cal_carc,1802] CURR_IN_OFFSET [0x75] = 0x0
+[  405.484903] <sm5602> [fg_cal_carc,1830] <0 6 1 11 -1 0 6 1 9 1>, temp_fg = 29 ,p_curr_cal = 0x80, n_curr_cal = 0x80, batt_temp = 29
+[  405.485174] <sm5602> [fg_cal_carc,1868] write CURR_IN_SLOPE [0x76] = 0x8080
+[  405.485202] <sm5602> [fg_cal_carc,1879] <0 2 1 2 1 1 2 3 2 3>, p_curr_cal = 0x80, n_curr_cal = 0x80, curr_cal = 0x8080
+[  405.485469] <sm5602> [fg_cal_carc,1886] write SM_FG_REG_VOL_COMP [0x96] = 0x0
+[  405.485734] <sm5602> [fg_cal_carc,1894] write SM_FG_REG_CURR_OFFSET [0x76] = 0x0
+[  405.486002] <sm5602> [fg_cal_carc,1902] write SM_FG_REG_CURR_SLOPE [0x18] = 0x8080
+[  405.489745] <sm5602> [fg_cal_carc,1920] 0x06=0x2162, 0x1E=0x707, 0x28=0x20f, 0x80=0x15, 0x83=0x3d2, 0x84=0x202b, 0x86=0x2263, 0x87=0x2ee, 0x93=0x0, 0x9C=0x121
+[  405.489786] <sm5602> [fg_refresh_status,2761] >>>>UISOC: 994,RSOC:925, Volt:4297, Current:365, Temperature:29, OCV:4172, RMC:4020
+[  405.491442] [USBPD-PM]: usbpd_psy_notifier_cb: psy(0x67d49000): name = bms
+[  405.491472] [USBPD-PM]: usbpd_psy_notifier_cb: ----usbpd_psy_notifier_cb 2190
+[  405.492275] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.492534] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.492559] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.492579] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.492601] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.492623] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.492652] [USBPD-PM]: usbpd_psy_notifier_cb: psy(0x4648c000): name = battery
+[  405.492673] [USBPD-PM]: usbpd_psy_notifier_cb: ----usbpd_psy_notifier_cb 2190
+[  405.493518] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.493547] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.493564] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.493586] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.493611] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.493837] <sm5602> [fg_read_current,1341] curr = 365(0x2ec)
+[  405.494124] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.494881] <sm5602> [fg_read_current,1341] curr = 365(0x2ec)
+[  405.494910] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.494928] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.494951] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.494968] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.494990] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 365, rtrace = 0
+[  405.495013] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.495032] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.495046] <sm5602> [calculate_average_temperature,1010] last_change_time = 1752709124, time_since_last_change_sec = 12, delta_time = 12
+[  405.495066] <sm5602> [calculate_average_temperature,1027] last_change_time = 1765600114, time_since_last_change_sec = 12, delta_time = 12
+[  405.495083] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 4
+[  405.495106] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.495507] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 116, rc = 2, val1 = 352533440
+[  405.496079] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.496234] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.496351] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.497123] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.497150] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.497169] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.497191] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.497214] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.497235] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.497301] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.498080] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.498105] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.498123] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.498144] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.498166] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.498186] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.498751] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.499021] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.500227] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.500253] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.500271] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.500297] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  405.500316] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  405.500729] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.501159] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.501179] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.501392] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.501550] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.501571] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.502014] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.502038] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.502056] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.502077] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.502099] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.502120] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.502527] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.503080] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.503336] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.503360] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.503378] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.503400] <nopmichg> [nopmi_batt_get_prop,1572] vbat=4297000, capacity=99
+[  405.503976] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.504147] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.504168] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.504267] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.504412] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.504566] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.504591] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.504690] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.504832] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.504988] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.505006] <sm5602> [calculate_average_temperature,1010] last_change_time = 1765600114, time_since_last_change_sec = 9, delta_time = 9
+[  405.505103] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  405.505230] <sm5602> [calculate_average_temperature,1027] last_change_time = 1775764384, time_since_last_change_sec = 9, delta_time = 9
+[  405.505384] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 5
+[  405.505411] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.505504] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.505910] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.505938] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.505956] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.505978] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.505996] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.506018] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.506041] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.506059] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.506075] <sm5602> [calculate_average_temperature,1010] last_change_time = 1775764384, time_since_last_change_sec = 0, delta_time = 0
+[  405.506094] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.506531] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.507180] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.507469] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.515425] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.515479] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.516188] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.516215] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.516225] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.516237] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.516247] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.516258] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.516640] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.517278] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.517296] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.517305] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.517318] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  405.517326] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  405.517990] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.518493] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.519163] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.519717] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.520453] <nopmichg> [time_to_full_now_show,2108] time_to_full_now_show :vbus_count >= 3 or vbus_check > 7500
+[  405.520789] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.520800] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.521412] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.521425] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.521434] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.521444] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.521454] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.521463] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.521769] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.522381] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.522393] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.522401] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.522717] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.522736] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418028
+[  405.523042] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.523052] <nopmichg> [time_to_full_now_show,2146] POWER_SUPPLY_PROP_CHARGE_TYPE bc12_type: 1
+[  405.523064] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  405.523074] <nopmichg> [nopmi_get_pd_pdo_active,1173] nopmi_get_pd_pdo_active: pd is 1
+[  405.523085] <nopmichg> [time_to_full_now_show,2190] batt_curr = 500, vbus_check = 4948, soc = 99, pd_active = 0, pd_pdo_active = 0, charge_afc = 0
+[  405.523469] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.523486] <nopmichg> [time_to_full_now_show,2198] batt_rmc = 4020
+[  405.523808] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.524162] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.524510] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.524523] <nopmichg> [time_to_full_now_show,2224] time_to_full_now_show : use cw221X gauge
+[  405.524533] <nopmichg> [time_to_full_now_show,2230] time_to_full_now_show : batt_fcc = 4343 batt_full_capacity=100
+[  405.524911] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.525207] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.525217] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.525227] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.525237] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.525251] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.525262] <nopmichg> [time_to_full_now_show,2284] batt_fcc = 4343, batt_rmc = 4020, batt_curr = 500, soc = 99,ret = 323
+[  405.525276] <nopmichg> [time_to_full_now_show,2301] time_to_full_now  2325
+[  405.525852] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.525868] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.525876] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.525886] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.525896] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.525973] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.526692] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.526719] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.526728] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.526738] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.526746] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.526754] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.526764] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.526772] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.526778] <sm5602> [calculate_average_temperature,1010] last_change_time = 1775764384, time_since_last_change_sec = 21, delta_time = 21
+[  405.526786] <sm5602> [calculate_average_temperature,1027] last_change_time = 1797320634, time_since_last_change_sec = 21, delta_time = 21
+[  405.526793] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 6
+[  405.526802] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.527395] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.527738] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.527750] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.528435] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.528459] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.528467] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.528477] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.528484] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.528493] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.528794] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.529379] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.529395] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.529403] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.529413] <nopmichg> [nopmi_batt_get_prop,1572] vbat=4297000, capacity=99
+[  405.530233] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.530257] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.530265] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.530274] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.530282] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.530844] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.531158] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.531173] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.531181] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.531190] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.531198] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.531206] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.531216] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.531223] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.531229] <sm5602> [calculate_average_temperature,1010] last_change_time = 1797320634, time_since_last_change_sec = 4, delta_time = 4
+[  405.531237] <sm5602> [calculate_average_temperature,1027] last_change_time = 1801772093, time_since_last_change_sec = 4, delta_time = 4
+[  405.531244] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 7
+[  405.531253] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.531811] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.532106] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.532117] <nopmichg> [ChargerType_to_UsbType,2795] chargertype = 1
+[  405.532127] <nopmichg> [ChargerType_to_UsbType,2831] usbtype = 4,ac_online = 0
+[  405.532135] <nopmichg> [nopmi_ac_get_prop,2910] nopmi_ac_get_prop = 4,ac_hold_online:0,main_chgdet:1
+[  405.532270] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=4,val->intval=0,ac_hold_online:0
+[  405.532571] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.532581] <nopmichg> [nopmi_usb_get_prop,3023] POWER_SUPPLY_PROP_ONLINE val->intval: 1
+[  405.532765] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=16,val->intval=0,ac_hold_online:0
+[  405.532854] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=8,val->intval=0,ac_hold_online:0
+[  405.533257] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.533746] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 116, rc = 2, val1 = 353418032
+[  405.534198] [sp2130-STANDALONE]:sp2130_check_charge_enabled:>>>reg [0x0E] = 0x07
+[  405.534822] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418064
+[  405.534837] <nopmichg> [hv_charger_status_show,1820] onlypd_active =0 vbus = 4948 pd_active = 0 charge_afc = 0 pd_pps_max_pw = 0 hv_charger_status=0 chg_type=0
+[  405.535302] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.535313] <nopmichg> [batt_misc_event_show,1964] main_chgdet = 1,batt_soc_rechg = 0 
+[  405.535395] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418064
+[  405.535731] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.536044] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.536054] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.536062] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.536071] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.536078] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.536087] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.536096] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.536103] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.536109] <sm5602> [calculate_average_temperature,1010] last_change_time = 1801772093, time_since_last_change_sec = 4, delta_time = 4
+[  405.536118] <sm5602> [calculate_average_temperature,1027] last_change_time = 1806652197, time_since_last_change_sec = 4, delta_time = 4
+[  405.536125] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 0
+[  405.536134] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.536433] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 180, rc = 0, val1 = 353418068
+[  405.536598] healthd: battery l=99 v=4297 t=29.0 h=2 st=2 c=364000 fc=4343000 cc=1 o=1 ct=1 hv=0 misc=0x0 sce=0x0 chg=u
+[  405.540438] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.540475] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.541152] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.541178] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.541186] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.541195] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.541203] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.541212] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.541536] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.542171] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.542196] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.542204] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.542214] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  405.542221] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  405.543241] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.544137] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.544942] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.545771] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.546952] <nopmichg> [time_to_full_now_show,2108] time_to_full_now_show :vbus_count >= 3 or vbus_check > 7500
+[  405.547365] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.547392] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.548090] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.548125] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.548135] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.548145] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.548155] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.548166] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.548593] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.549341] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.549380] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.549390] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.549780] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.549812] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418028
+[  405.550231] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.550261] <nopmichg> [time_to_full_now_show,2146] POWER_SUPPLY_PROP_CHARGE_TYPE bc12_type: 1
+[  405.550277] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  405.550288] <nopmichg> [nopmi_get_pd_pdo_active,1173] nopmi_get_pd_pdo_active: pd is 1
+[  405.550299] <nopmichg> [time_to_full_now_show,2190] batt_curr = 500, vbus_check = 4948, soc = 99, pd_active = 0, pd_pdo_active = 0, charge_afc = 0
+[  405.550762] <sm5602> [fg_read_rmc,1383] rmc = 4020(0x202b)
+[  405.550803] <nopmichg> [time_to_full_now_show,2198] batt_rmc = 4020
+[  405.551216] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.551658] <sm5602> [fg_read_fcc,1363] fcc = 4343(0x22bf)
+[  405.551694] <nopmichg> [time_to_full_now_show,2224] time_to_full_now_show : use cw221X gauge
+[  405.551704] <nopmichg> [time_to_full_now_show,2230] time_to_full_now_show : batt_fcc = 4343 batt_full_capacity=100
+[  405.552437] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.552475] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.552485] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.552496] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.552506] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.552516] <nopmichg> [time_to_full_now_show,2284] batt_fcc = 4343, batt_rmc = 4020, batt_curr = 500, soc = 99,ret = 323
+[  405.552529] <nopmichg> [time_to_full_now_show,2301] time_to_full_now  2325
+[  405.553489] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.554009] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.554052] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.554062] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.554073] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.554082] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.554092] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.554104] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.554112] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.554120] <sm5602> [calculate_average_temperature,1010] last_change_time = 1806652197, time_since_last_change_sec = 18, delta_time = 18
+[  405.554130] <sm5602> [calculate_average_temperature,1027] last_change_time = 1824664957, time_since_last_change_sec = 18, delta_time = 18
+[  405.554139] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 1
+[  405.554150] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.555161] <sm5602> [fg_read_volt,1219] volt = 4297(0x4402)
+[  405.555608] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.555634] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.557010] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.557057] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.557066] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.557074] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.557083] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.557092] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.557826] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.558773] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.558818] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.558827] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.558837] <nopmichg> [nopmi_batt_get_prop,1572] vbat=4297000, capacity=99
+[  405.559936] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.559977] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.559986] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.559995] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.560003] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.560630] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.561025] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.561057] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.561065] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.561074] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.561080] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.561088] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.561099] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.561106] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.561112] <sm5602> [calculate_average_temperature,1010] last_change_time = 1824664957, time_since_last_change_sec = 6, delta_time = 6
+[  405.561120] <sm5602> [calculate_average_temperature,1027] last_change_time = 1831655009, time_since_last_change_sec = 6, delta_time = 6
+[  405.561128] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 2
+[  405.561137] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.561859] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.562229] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.562248] <nopmichg> [ChargerType_to_UsbType,2795] chargertype = 1
+[  405.562624] <nopmichg> [ChargerType_to_UsbType,2831] usbtype = 4,ac_online = 0
+[  405.562643] <nopmichg> [nopmi_ac_get_prop,2910] nopmi_ac_get_prop = 4,ac_hold_online:0,main_chgdet:1
+[  405.562907] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=4,val->intval=0,ac_hold_online:0
+[  405.563321] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.563353] <nopmichg> [nopmi_usb_get_prop,3023] POWER_SUPPLY_PROP_ONLINE val->intval: 1
+[  405.563713] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=16,val->intval=0,ac_hold_online:0
+[  405.563814] <nopmichg> [nopmi_usb_get_prop,2982] nopmi_usb_get_prop psp=8,val->intval=0,ac_hold_online:0
+[  405.564274] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.564888] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 116, rc = 2, val1 = 353418032
+[  405.565412] [sp2130-STANDALONE]:sp2130_check_charge_enabled:>>>reg [0x0E] = 0x07
+[  405.566063] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418064
+[  405.566092] <nopmichg> [hv_charger_status_show,1820] onlypd_active =0 vbus = 4922 pd_active = 0 charge_afc = 0 pd_pps_max_pw = 0 hv_charger_status=0 chg_type=0
+[  405.566732] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:1, ret:0, val->intval:1
+[  405.566767] <nopmichg> [batt_misc_event_show,1964] main_chgdet = 1,batt_soc_rechg = 0 
+[  405.567059] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 353418064
+[  405.567555] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.568012] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.568046] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.568054] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.568063] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.568070] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.568078] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.568088] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.568095] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.568101] <sm5602> [calculate_average_temperature,1010] last_change_time = 1831655009, time_since_last_change_sec = 6, delta_time = 6
+[  405.568110] <sm5602> [calculate_average_temperature,1027] last_change_time = 1838644332, time_since_last_change_sec = 6, delta_time = 6
+[  405.568117] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 3
+[  405.568125] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.568592] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 180, rc = 0, val1 = 353418068
+[  405.568777] healthd: battery l=99 v=4297 t=29.0 h=2 st=2 c=364000 fc=4343000 cc=1 o=1 ct=1 hv=0 misc=0x0 sce=0x0 chg=u
+[  405.758706] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  405.760050] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefad
+[  405.760790] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.760825] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  405.760844] <sm5602> [interp_adc_to_meas,987] FFFFEFAD, (FFFFEF85, FFFFF061), (550000, 555000), 550909
+
+[  405.760867] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  405.760885] <sm5602> [interp_meas_to_adc,953] 550909, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFAC
+
+[  405.760907] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefac, temp_mv = 550909, code_meas = 550909, curr = 364, rtrace = 0
+[  405.760931] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefad, val = 0xffffefac, temp = 29
+[  405.760949] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  405.760965] <sm5602> [calculate_average_temperature,1010] last_change_time = 1838644332, time_since_last_change_sec = 192, delta_time = 192
+[  405.760985] <sm5602> [calculate_average_temperature,1027] last_change_time = 2031519072, time_since_last_change_sec = 192, delta_time = 192
+[  405.761004] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 4
+[  405.761028] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  405.761593] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  405.761798] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  405.762138] <sm5602> [fg_read_volt,1219] volt = 4296(0x43fe)
+[  405.762168] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4296 batt_curr:364
+[  405.762189] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  405.762217] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  405.762728] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  405.762759] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  405.762776] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  405.762792] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  405.762815] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  405.762846] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  405.762869] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  405.762901] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  405.763884] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  405.763913] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  405.763938] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  405.764589] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  405.764618] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  405.764648] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  405.764677] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  405.764698] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  405.765301] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  405.765324] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  405.765340] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  405.951135] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  405.951657] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.951687] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.952468] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.952495] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.952515] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.952537] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.952560] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.952581] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.952961] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.953702] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.953726] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.953746] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.954147] <sm5602> [fg_read_current,1341] curr = 363(0x2e8)
+[  405.954174] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=363000, onlion=1,soc=99
+[  405.955354] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  405.955382] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  405.956130] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.956156] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.956174] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  405.956194] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  405.956217] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  405.956237] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  405.956616] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  405.957357] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.957381] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.957399] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  405.958146] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  405.958171] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  405.958190] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  405.958212] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  405.958233] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  405.983148] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  405.983221] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  405.983246] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  405.983267] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  405.983294] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  405.983329] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  405.983351] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  405.983380] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  405.983406] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  405.983434] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  406.239407] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  406.239472] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  406.239506] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  406.239524] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  406.239548] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  407.006843] <nopmichg> [nopmi_chg_workfunc,3525]  nopmi_usb_online=1
+[  407.308318] set AF for addr 7576048598
+[  407.775228] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  407.781849] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefb9
+[  407.782353] <sm5602> [fg_read_current,1341] curr = 366(0x2ed)
+[  407.782396] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  407.782416] <sm5602> [interp_adc_to_meas,987] FFFFEFB9, (FFFFEF85, FFFFF061), (550000, 555000), 551181
+
+[  407.782440] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  407.782458] <sm5602> [interp_meas_to_adc,953] 551181, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFB8
+
+[  407.782481] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefb8, temp_mv = 551181, code_meas = 551181, curr = 366, rtrace = 0
+[  407.782504] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefb9, val = 0xffffefb8, temp = 29
+[  407.782523] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  407.782538] <sm5602> [calculate_average_temperature,1010] last_change_time = 2031519072, time_since_last_change_sec = 2021, delta_time = 2021
+[  407.782922] <sm5602> [calculate_average_temperature,1027] last_change_time = -241510933, time_since_last_change_sec = 2021, delta_time = 2021
+[  407.782946] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 5
+[  407.782970] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  407.783476] <sm5602> [fg_read_current,1341] curr = 366(0x2ed)
+[  407.783609] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  407.784032] <sm5602> [fg_read_volt,1219] volt = 4298(0x4412)
+[  407.784061] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4298 batt_curr:366
+[  407.784083] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  407.784113] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  407.784575] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  407.784600] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  407.784617] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  407.784633] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  407.784656] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  407.784689] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  407.784713] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  407.784750] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  407.785411] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  407.785437] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  407.785462] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  407.786112] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  407.786140] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  407.786170] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  407.786199] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  407.786218] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  407.786660] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  407.786685] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  407.786701] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  407.966678] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  407.967221] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  407.967247] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  407.968024] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  407.968050] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  407.968069] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  407.968091] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  407.968113] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  407.968134] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  407.968511] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  407.969248] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  407.969273] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  407.969293] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  407.969692] <sm5602> [fg_read_current,1341] curr = 366(0x2ed)
+[  407.969720] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=366000, onlion=1,soc=99
+[  407.970984] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  407.971018] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  407.971771] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  407.971800] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  407.971819] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  407.971840] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  407.971862] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  407.971883] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  407.972264] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  407.973013] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  407.973043] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  407.973061] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  407.973808] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  407.973834] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  407.973854] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  407.973878] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  407.973898] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  408.201027] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  408.201093] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  408.201721] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  408.201736] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  408.201746] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  408.201758] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  408.201768] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  408.201780] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  408.202084] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  408.202807] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  408.202820] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  408.202830] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  408.202842] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  408.202850] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  408.798858] msm_watchdog_data - pet: 408.798849 / last_pet: 399.327152 (delta: 9.471696)
+[  408.799427] (virq:irq_count)- GICv3:IPI(1):1253499 GICv3:arch_timer(11):612401 GICv3:ufshcd(40):300939 GICv3:IPI(6):213759 GICv3:IPI(2):138304 GICv3:glink-native-rpm-glink(33):94064 GICv3:kgsl_3d0_irq(48):31167 GICv3:msm-vidc(166):30637 GICv3:glink-native-adsp(216):29756 GICv3:msm_drm(167):19801 
+[  408.799562] (cpu:irq_count)- 0:523393 1:430407 2:406129 3:382571 4:369899 5:219264 6:225863 7:229683 
+[  408.799630] (ipi:irq_count)- 0:1253499 1:138304 2:0 3:0 4:161 5:213759 6:0 
+[  409.055230] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  409.055305] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  409.055335] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  409.055357] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  409.055383] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  409.055419] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  409.055442] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  409.055470] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  409.055497] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  409.055530] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  409.311469] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  409.311533] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  409.311563] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  409.311582] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  409.311613] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  409.790638] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  409.795942] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefb9
+[  409.796299] <sm5602> [fg_read_current,1341] curr = 366(0x2ee)
+[  409.796315] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  409.796324] <sm5602> [interp_adc_to_meas,987] FFFFEFB9, (FFFFEF85, FFFFF061), (550000, 555000), 551181
+
+[  409.796333] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  409.796341] <sm5602> [interp_meas_to_adc,953] 551181, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFB8
+
+[  409.796350] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefb8, temp_mv = 551181, code_meas = 551181, curr = 366, rtrace = 0
+[  409.796360] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefb9, val = 0xffffefb8, temp = 29
+[  409.796368] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  409.796374] <sm5602> [calculate_average_temperature,1010] last_change_time = -241510933, time_since_last_change_sec = 2013, delta_time = 2013
+[  409.796383] <sm5602> [calculate_average_temperature,1027] last_change_time = 1771950264, time_since_last_change_sec = 2013, delta_time = 2013
+[  409.796392] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 6
+[  409.796402] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  409.796734] <sm5602> [fg_read_current,1341] curr = 366(0x2ee)
+[  409.796803] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  409.797108] <sm5602> [fg_read_volt,1219] volt = 4295(0x43ec)
+[  409.797120] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4295 batt_curr:366
+[  409.797130] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  409.797146] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  409.797473] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  409.797483] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  409.797491] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  409.797498] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  409.797509] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  409.797526] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  409.797535] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  409.797556] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  409.798072] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  409.798083] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  409.798093] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  409.798905] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  409.798960] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  409.798991] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  409.799020] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  409.799039] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  409.799481] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  409.799505] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  409.799521] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  409.983235] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  409.983772] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  409.983800] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  409.984590] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  409.984620] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  409.984640] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  409.984664] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  409.984687] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  409.984709] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  409.985094] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  409.985840] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  409.985864] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  409.985884] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  409.986291] <sm5602> [fg_read_current,1341] curr = 364(0x2e9)
+[  409.986318] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=364000, onlion=1,soc=99
+[  409.987521] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  409.987550] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  409.988301] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  409.988328] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  409.988346] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  409.988366] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  409.988388] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  409.988409] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  409.988789] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  409.989529] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  409.989554] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  409.989574] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  409.990319] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  409.990344] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  409.990364] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  409.990388] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  409.990410] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  410.439928] set AF for addr 7576048608
+[  410.475596] set AF for addr 7576048678
+[  410.483853] KernelSU: ksu fd installed: 5 for pid 17380
+[  410.483868] KernelSU: [17380] install ksu fd: 5
+[  410.483877] kpm: Stub function called (sukisu_kpm_version). buffer=000000003254e172
+[  410.484418] KernelSU: ksu fd released
+[  410.616976] !@   8,0 r 347175 9941500 w 24082 484072 d 150 337860 f 3858 5798 iot 149748 0 th 0 0 0 pt 0 inp 0 0 410.614
+[  411.457012] !@Sync: 14 heap(MB): 101 / 103 FD: 953 [2026-06-14 23:15:42.512] softdog disabled
+[  411.807226] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  411.812372] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefbe
+[  411.812854] <sm5602> [fg_read_current,1341] curr = 361(0x2e3)
+[  411.812886] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  411.812906] <sm5602> [interp_adc_to_meas,987] FFFFEFBE, (FFFFEF85, FFFFF061), (550000, 555000), 551295
+
+[  411.812931] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  411.812948] <sm5602> [interp_meas_to_adc,953] 551295, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFBD
+
+[  411.812971] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefbd, temp_mv = 551295, code_meas = 551295, curr = 361, rtrace = 0
+[  411.812994] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefbe, val = 0xffffefbd, temp = 29
+[  411.813013] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  411.813031] <sm5602> [calculate_average_temperature,1010] last_change_time = 1771950264, time_since_last_change_sec = 2016, delta_time = 2016
+[  411.813050] <sm5602> [calculate_average_temperature,1027] last_change_time = -506349897, time_since_last_change_sec = 2016, delta_time = 2016
+[  411.813071] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 7
+[  411.813096] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  411.813564] <sm5602> [fg_read_current,1341] curr = 361(0x2e3)
+[  411.813691] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  411.814203] <sm5602> [fg_read_volt,1219] volt = 4297(0x4406)
+[  411.814232] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4297 batt_curr:361
+[  411.814253] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  411.814282] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  411.815081] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4276
+[  411.815111] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  411.815130] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  411.815147] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  411.815170] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4276
+[  411.815203] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  411.815229] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  411.815265] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  411.815884] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  411.815912] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  411.815935] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  411.816541] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  411.816569] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  411.816599] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  411.816628] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  411.816648] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  411.817056] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  411.817081] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  411.817096] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  411.999388] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  411.999918] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  411.999947] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  412.001558] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  412.001586] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  412.001606] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  412.001630] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  412.001652] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  412.001673] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  412.002081] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  412.002864] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  412.002889] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  412.002907] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  412.003334] <sm5602> [fg_read_current,1341] curr = 361(0x2e3)
+[  412.003368] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=361000, onlion=1,soc=99
+[  412.004614] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  412.004660] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  412.005859] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  412.005919] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  412.005938] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  412.005959] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  412.005981] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  412.006002] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  412.006446] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  412.007534] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  412.007582] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  412.007603] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  412.008415] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  412.008441] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  412.008460] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  412.008484] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  412.008505] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  412.127181] <nopmichg> [nopmi_fv_vote_monitor_work,3740] nopmi_fv_vote_monitor_work: start
+[  412.127268] <nopmichg> [nopmi_fv_vote_monitor_work,3748] debug battery count 519
+[  412.127290] <nopmichg> [nopmi_fv_vote_monitor_work,3751] battery count 1
+[  412.127311] <nopmichg> [nopmi_fv_vote_monitor_work,3765] battery_cycle = 519, fv = 4310
+[  412.127335] <nopmichg> [nopmi_get_pd_active,1149] nopmi_get_pd_active: pd is 1
+[  412.127380] <nopmichg> [nopmi_chg_workfunc,3525]  nopmi_usb_online=1
+[  412.127434] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 185744668
+[  412.127460] <nopmichg> [nopmi_fv_vote_monitor_work,3801] nopmi_fv_vote_monitor_work:pd_active=0,charge_afc=0,quick_charge_pre=0
+[  412.127487] t_c_c in vote votable->name = FV client_str=CYCLE_COUNT_VOTER enabled =1 val=4310
+[  412.127511] <nopmichg> [nopmi_fv_vote_monitor_work,3816] vote fv, charge status = 1, fv = 4310
+[  412.127537] <nopmichg> [nopmi_fv_vote_monitor_work,3820] nopmi_fv_vote_monitor_work: end
+[  412.312806] set AF for addr 75760486e8
+[  412.383277] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: start
+[  412.383340] [USBPD-PM]: cp_pd_vote_monitor_work: DEBUG cyclt_count = 519
+[  412.383373] [USBPD-PM]: cp_pd_vote_monitor_work: cyclt_count = 1
+[  412.383392] [USBPD-PM]: cp_pd_vote_monitor_work: debug battery_cycle = 519, cv = 4290
+[  412.383417] [USBPD-PM]: cp_pd_vote_monitor_work: cp_pd_vote_monitor_work: end
+[  412.618347] !@ Read_top(KB): com.whatsapp(7639) 1172
+[  412.618491] !@ Write_top(KB): kworker/u16:0(8) 12
+[  413.213392] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  413.213464] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  413.215787] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  413.215826] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  413.215846] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  413.215870] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  413.215894] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  413.215915] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  413.216458] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  413.217282] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  413.217311] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  413.217329] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  413.217356] <nopmichg> [nopmi_batt_get_prop,1535] rc = 0 uisoc = 99 
+[  413.217373] <nopmichg> [nopmi_batt_get_prop,1553] Did't in factory mode! CONFIG_NOPMI_FACTORY_CHARGER not define
+[  413.822741] nopmi_chg_jeita nopmi_chg_jeita_workfunc: enter.
+[  413.829636] <sm5602> [_calculate_battery_temp_ex,1081] ENABLE_NTC_COMPENSATION : val = 0xffffefd1
+[  413.830148] <sm5602> [fg_read_current,1341] curr = 359(0x2df)
+[  413.830186] <sm5602> [interp_adc_to_meas,969] interp_adc_to_meas
+
+[  413.830205] <sm5602> [interp_adc_to_meas,987] FFFFEFD1, (FFFFEF85, FFFFF061), (550000, 555000), 551727
+
+[  413.830228] <sm5602> [interp_meas_to_adc,935] interp_meas_to_adc
+
+[  413.830245] <sm5602> [interp_meas_to_adc,953] 551727, (550000, 555000), (FFFFEF85, FFFFF061), FFFFEFD0
+
+[  413.830267] <sm5602> [_calculate_battery_temp_ex,1099] ENABLE_NTC_COMPENSATION : val(code_adc) = 0xffffefd0, temp_mv = 551727, code_meas = 551727, curr = 359, rtrace = 0
+[  413.830290] <sm5602> [_calculate_battery_temp_ex,1116] uval = 0xefd1, val = 0xffffefd0, temp = 29
+[  413.830308] <sm5602> [fg_read_temperature,1157] fg_read_temperature_ex temp_ex=29
+[  413.830325] <sm5602> [calculate_average_temperature,1010] last_change_time = -506349897, time_since_last_change_sec = 2017, delta_time = 2017
+[  413.830345] <sm5602> [calculate_average_temperature,1027] last_change_time = 1510944946, time_since_last_change_sec = 2017, delta_time = 2017
+[  413.830364] <sm5602> [calculate_average_temperature,1051] temp_samples[0:7] = 29 29 29 29 29 29 29 29, samples_index = 0
+[  413.830388] <sm5602> [calculate_average_temperature,1058] temp_now = 29, averaged_avg_temp = 29
+[  413.831173] <sm5602> [fg_read_current,1341] curr = 359(0x2df)
+[  413.831330] nopmi_chg_jeita nopmi_chg_jeita_get_bat_temperature: get_bat_temperature is 29
+[  413.831823] <sm5602> [fg_read_volt,1219] volt = 4299(0x4419)
+[  413.831850] <nopmichg> [nopmi_cv_step_monitor_work,3656] fg_cc_cv_step_check: batt_volt:4299 batt_curr:359
+[  413.831868] <nopmichg> [nopmi_select_cycle,3599] cycle count now: 1, nopmi_chg->cycle_count: 0, CYCLE_COUNT: 100.
+[  413.831891] <nopmichg> [nopmi_cv_step_monitor_work,3724] nopmi_cv_step_monitor_work: end
+[  413.832284] nopmi_chg_jeita nopmi_chg_jeita_get_battery_voltage: get charger_voltage is 4277
+[  413.832304] nopmi_chg_jeita nopmi_chg_handle_jeita_current: enter.
+[  413.832316] nopmi_chg_jeita nopmi_chg_handle_jeita_current: jeita fcc_vote_val=4000 lcd_status=0
+[  413.832329] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA] Battery Normal Temperature(29) between 15 and 45 !!
+[  413.832346] nopmi_chg_jeita nopmi_chg_handle_jeita_current: 12 ~ 45 nopmi_chg_jeita->jeita_current_limit=4000 cpvbatt=4277
+[  413.832372] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [sw-jeita] write before sw_jeita->cv=4350 nopmi_chg_jeita->jeita_current_limit=4000!!
+[  413.832391] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4001
+[  413.832420] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  413.832981] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4001]
+[  413.833001] t_c_c in vote votable->name = FCC client_str=JEITA_VOTER enabled =1 val=4000
+[  413.833020] <upm6918-05172200> [upm6918_set_chargecurrent,363] upm6918_set_chargecurrent:curr=3780
+[  413.833564] <upm6918-05172200> [fcc_vote_callback,2429] ch_log  fcc[4000]
+[  413.833586] t_c_c in vote votable->name = FV client_str=JEITA_VOTER enabled =1 val=4350
+[  413.833610] nopmi_chg_jeita nopmi_chg_jeita_get_pd_active: nopmi_chg_jeita_get_pd_active: pd is 1
+[  413.833634] <upm6918-05172200> [upm6918_iio_read_raw,2222] read IIO channel 181, rc = 0, val1 = 200457488
+[  413.833648] nopmi_chg_jeita nopmi_chg_handle_jeita_current: get pd_active: 0  afc_active: 0
+[  413.834012] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:67, ret:0, val->intval:240
+[  413.834031] nopmi_chg_jeita nopmi_chg_jeita_get_charger_term_current: get term_current: 240
+[  413.834043] nopmi_chg_jeita nopmi_chg_handle_jeita_current: [SW_JEITA]preState:5 newState:5 temp:29 cv:4350,4310 nopmi_chg_jeita->jeita_current_limit:4000, term_curr:240,240, batt_id:1, pd_active:0
+[  413.855143] KernelSU: newfstatat su->sh!
+[  413.855217] KernelSU: faccessat su->sh!
+[  413.856705] set AF for addr 7c2aa2a2e8
+[  413.856734] KernelSU: sys_execve su found
+[  413.887296] KernelSU: ksu fd installed: 3 for pid 17392
+[  413.887321] KernelSU: [17392] install ksu fd: 3
+[  413.887465] KernelSU: handle_setresuid from 0 to 0
+[  413.888590] KernelSU: ksu fd released
+[  414.014641] <nopmichg> [nopmi_batt_capacity_check_work,3931] batt_capacity_check_work: start batt_full_capacity = 100 , batt_full_capacity_pre = 0
+[  414.015103] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  414.015139] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  414.015848] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  414.015895] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  414.015904] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  414.015913] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  414.015923] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  414.015933] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  414.016269] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  414.017019] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  414.017055] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  414.017064] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  414.017411] <sm5602> [fg_read_current,1341] curr = 37(0x4c)
+[  414.017440] <nopmichg> [nopmi_configure_recharging,3879] configure_recharging val=0, current=37000, onlion=1,soc=99
+[  414.018450] <sm5602> [fg_read_soc,885] soc=925(0x5c94)
+[  414.018490] <sm5602> [fg_get_property,2087] fg_get_property fg_reset_flag=1,old_soc:994,ret = 994
+[  414.019249] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  414.019291] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  414.019299] <nopmichg> [nopmi_batt_get_prop,1480] main_chgdet = 1 
+[  414.019309] <nopmichg> [nopmi_batt_get_prop,1516] status full in advance: batt_capacity_store=0, batt_full_count=0
+[  414.019318] <nopmichg> [nopmi_batt_get_prop,1518] STATUS2 = 1 
+[  414.019328] <sm5602> [fg_get_property,2131] sm->batt_ui_soc: 994, val->intval: 99
+[  414.019681] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:4, ret:0, val->intval:1
+[  414.020443] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  414.020476] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  414.020485] <sm5602> [Get_ChargerProp_To_ChangeSoc,2035] Get_ChargerProp_To_ChangeSoc soc_val=99,bbc_status:0
+[  414.021441] <upm6918-05172200> [upm6918_charger_get_property,2012] original val=2
+[  414.021478] <upm6918-05172200> [upm6918_charger_get_property,2061] prop:0, ret:0, val->intval:1
+[  414.021487] <nopmichg> [nopmi_batt_capacity_check_work,3976] batt_slate_mode status = batt_slate_mode = 0, batt_slate_modepre = 0
+[  414.021497] <nopmichg> [nopmi_batt_capacity_check_work,4053] start batt_full_capacity clear batt_full_capacity,start charge
+[  414.021505] <nopmichg> [nopmi_batt_capacity_check_work,4056] batt_capacity_check_work: end
+[  414.028659] KernelSU: newfstatat su->sh!
+[  414.028699] KernelSU: faccessat su->sh!
+[  414.029700] set AF for addr 7b1322a328
+[  414.029715] KernelSU: sys_execve su found
+[  414.056120] KernelSU: handle_setresuid from 0 to 0

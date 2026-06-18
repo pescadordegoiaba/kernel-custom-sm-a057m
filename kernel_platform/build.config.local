@@ -1,0 +1,224 @@
+# Local host overrides for building the Samsung m269 kernel outside AOSP.
+
+# SUSFS em quarentena por padrao.
+# Evidencia offline de 17/06/2026: mesmo sem subhooks, CONFIG_KSU_SUSFS=y
+# altera caminhos de VFS/SELinux/init e repetiu bootloop na segunda logo.
+# Para bisseccao controlada, use KSU_SUSFS_BUILD=1 e aceite a auditoria
+# experimental explicitamente.
+export KSU_SUSFS_BUILD="${KSU_SUSFS_BUILD:-0}"
+export KSU_SUSFS_SUS_PATH="${KSU_SUSFS_SUS_PATH:-0}"
+export KSU_SUSFS_SUS_MOUNT="${KSU_SUSFS_SUS_MOUNT:-0}"
+export KSU_SUSFS_SUS_KSTAT="${KSU_SUSFS_SUS_KSTAT:-0}"
+export KSU_SUSFS_SPOOF_UNAME="${KSU_SUSFS_SPOOF_UNAME:-1}"
+export KSU_SUSFS_ENABLE_LOG="${KSU_SUSFS_ENABLE_LOG:-1}"
+export KSU_SUSFS_HIDE_SYMBOLS="${KSU_SUSFS_HIDE_SYMBOLS:-0}"
+export KSU_SUSFS_SPOOF_CMDLINE="${KSU_SUSFS_SPOOF_CMDLINE:-0}"
+export KSU_SUSFS_OPEN_REDIRECT="${KSU_SUSFS_OPEN_REDIRECT:-0}"
+export KSU_SUSFS_SUS_MAP="${KSU_SUSFS_SUS_MAP:-0}"
+export LOGSK_BUILD="${LOGSK_BUILD:-0}"
+
+# Release Samsung A057MUBSADYG1 — deve coincidir com vermagic stock:
+# 5.15.167-android13-8-31192385-abA057MUBSADYG1
+LOCALVERSION="-31192385"
+BUILD_NUMBER="A057MUBSADYG1"
+
+HERMETIC_TOOLCHAIN=0
+NDK_TRIPLE=
+BUILDTOOLS_PREBUILT_BIN=local-tools
+DTC="${OUT_DIR}/host/bin/dtc"
+LZ4_RAMDISK=1
+
+# boot.img / vendor_boot.img are produced by pack_flash_images.sh using stock
+# partition images from the phone firmware. Keep the in-tree image builder off
+# here because it needs stock ramdisks and mkbootfs outside AOSP.
+BUILD_BOOT_IMG=
+BUILD_INIT_BOOT_IMG=
+BUILD_VENDOR_DLKM=
+PREPARE_SYSTEM_DLKM=
+BUILD_SYSTEM_DLKM=
+BUILD_GKI_CERTIFICATION_TOOLS=
+BUILD_GKI_ARTIFACTS=
+SUPER_IMAGE_SIZE=
+KMI_SYMBOL_LIST_STRICT_MODE=0
+
+# Samsung's m269 fragment requests this header self-test, but its Kconfig
+# dependencies disable it. Accept only that known normalization.
+function check_local_merged_defconfig() {
+  local output
+
+  if [[ -z "${DEFCONFIG_FRAGMENTS}" || "${DEFCONFIG_FRAGMENTS}" == "${DEFCONFIG}" ]]; then
+    return
+  fi
+
+  output="$(mktemp)"
+  "${KERNEL_DIR}/scripts/diffconfig" \
+    "${KERNEL_DIR}/arch/${ARCH}/configs/${DEFCONFIG}" \
+    "${OUT_DIR}/.config" > "${output}"
+
+  if grep -q -v -E \
+      -e '^\+' \
+      -e '^CMDLINE ' \
+      -e '^-UAPI_HEADER_TEST y$' \
+      "${output}"; then
+    echo "ERROR: defconfig local divergiu além de UAPI_HEADER_TEST" >&2
+    grep -v -E -e '^\+' -e '^CMDLINE ' -e '^-UAPI_HEADER_TEST y$' "${output}" >&2
+    rm -f "${output}"
+    exit 1
+  fi
+
+  rm -f "${output}"
+}
+
+if [[ "${KERNEL_DIR}" == "./msm-kernel" || "${KERNEL_DIR}" == "msm-kernel" ]]; then
+  DTS_EXT_DIR=msm-kernel/arch/arm64/boot/dts/vendor
+  POST_DEFCONFIG_CMDS="check_local_merged_defconfig && sanity_check_abi"
+  append_cmd POST_DEFCONFIG_CMDS enable_vendor_pstore_config
+  append_cmd POST_DEFCONFIG_CMDS maybe_disable_btf_config
+
+  # Samsung quotes TOOL_ARGS as one make argument. Keep each assignment
+  # separate and fail clearly if no device trees were installed.
+  function install_dtbs() {
+    local install_path="${COMMON_OUT_DIR}/dtb_staging"
+    local dtb_types="${MSM_ARCH}-"
+    local -a dtbs
+
+    if [[ "${DT_OVERLAY_SUPPORT}" -eq 1 ]]; then
+      dtb_types="${dtb_types}overlays-"
+    fi
+
+    rm -rf "${install_path}"
+    (
+      cd "${KERNEL_DIR}"
+      make ${TOOL_ARGS} O="${OUT_DIR}" "${MAKE_ARGS[@]}" \
+        INSTALL_DTBS_PATH="${install_path}" \
+        DTB_TYPES="${dtb_types}" dtbs_install
+    )
+
+    mapfile -d '' dtbs < <(
+      find "${install_path}" -type f \
+        \( -name '*.dtb' -o -name '*.dtbo' \) -print0
+    )
+    if (( ${#dtbs[@]} == 0 )); then
+      echo "ERROR: nenhum DTB/DTBO foi instalado" >&2
+      return 1
+    fi
+    cp -p -- "${dtbs[@]}" "${DIST_DIR}/"
+  }
+
+  DIST_CMDS=install_dtbs
+fi
+
+# GKI: keep pstore shape stock-like in the default flashable profile.
+# The 17/06 bootloop reproduced with only two config deltas versus the kernel
+# that boots on-device: MODULE_REL_CRCS=y and PSTORE_DEFAULT_KMSG_BYTES=1048576.
+function keep_gki_pstore_stock_config() {
+  "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+    -e PSTORE \
+    -e PSTORE_RAM \
+    -e PSTORE_CONSOLE \
+    -e PSTORE_PMSG \
+    -e PSTORE_DEFLATE_COMPRESS \
+    --set-val PSTORE_DEFAULT_KMSG_BYTES 10240
+}
+
+function maybe_disable_btf_config() {
+  # BTF is part of the module ABI shape because CONFIG_DEBUG_INFO_BTF_MODULES
+  # changes struct module. Keep it enabled by default for stock CRC parity.
+  [[ "${DISABLE_BTF:-0}" == "1" ]] || return 0
+  "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+    -d DEBUG_INFO_BTF \
+    -d DEBUG_INFO_BTF_MODULES
+}
+
+function keep_gki_module_crc_format_stock_config() {
+  "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+    -d MODULE_REL_CRCS
+}
+
+function set_gki_logsk_config() {
+  if [[ "${LOGSK_BUILD:-0}" == "1" ]]; then
+    echo "GKI: LOGSK_BUILD=1 — CONFIG_LOGSK_BOOTLOGGER ativo para diagnostico" >&2
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+      -e LOGSK_BOOTLOGGER
+  else
+    echo "GKI: LOGSK_BUILD=0 — CONFIG_LOGSK_BOOTLOGGER desativado" >&2
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+      -d LOGSK_BOOTLOGGER
+  fi
+}
+
+# Vendor DLKM: minidump → pstore (qcom,bengal DT já expõe ramoops_region).
+function enable_vendor_pstore_config() {
+  "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+    -e QCOM_MINIDUMP \
+    -e QCOM_MINIDUMP_PSTORE \
+    -e QCOM_MINIDUMP_PANIC_DUMP \
+    -e QCOM_MINIDUMP_PANIC_CPU_CONTEXT \
+    -e QCOM_MINIDUMP_FTRACE \
+    -e QCOM_RAMDUMP \
+    -m QCOM_MINIDUMP \
+    -m QCOM_RAMDUMP
+}
+
+# KernelSU ships in the GKI Image; mixed builds never relink vendor vmlinux.
+function set_gki_susfs_config_bool() {
+  local config="$1"
+  local value="$2"
+
+  if [[ "${value}" == "1" ]]; then
+    echo "GKI: ${config}=1 — ativado por env" >&2
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" -e "${config}"
+  else
+    echo "GKI: ${config}=0 — desativado no perfil boot-safe" >&2
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" --disable "${config}"
+  fi
+}
+
+function enable_gki_ksu_config() {
+  if [[ ! -e "${ROOT_DIR}/common/drivers/kernelsu" ]]; then
+    echo "AVISO: KernelSU ausente em common/drivers/kernelsu; pulando CONFIG_KSU no GKI" >&2
+    return
+  fi
+  if [[ "${KSU_SUSFS_BUILD:-0}" == "1" ]]; then
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+      -e KSU -e KPM --disable KSU_DEBUG \
+      -e KSU_SUSFS
+    set_gki_susfs_config_bool KSU_SUSFS_SUS_PATH "${KSU_SUSFS_SUS_PATH:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_SUS_MOUNT "${KSU_SUSFS_SUS_MOUNT:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_SUS_KSTAT "${KSU_SUSFS_SUS_KSTAT:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_SPOOF_UNAME "${KSU_SUSFS_SPOOF_UNAME:-1}"
+    set_gki_susfs_config_bool KSU_SUSFS_ENABLE_LOG "${KSU_SUSFS_ENABLE_LOG:-1}"
+    set_gki_susfs_config_bool KSU_SUSFS_HIDE_KSU_SUSFS_SYMBOLS "${KSU_SUSFS_HIDE_SYMBOLS:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_SPOOF_CMDLINE_OR_BOOTCONFIG "${KSU_SUSFS_SPOOF_CMDLINE:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_OPEN_REDIRECT "${KSU_SUSFS_OPEN_REDIRECT:-0}"
+    set_gki_susfs_config_bool KSU_SUSFS_SUS_MAP "${KSU_SUSFS_SUS_MAP:-0}"
+  else
+    echo "GKI: KSU_SUSFS_BUILD=0 — Image sem SUSFS (perfil boot-safe)" >&2
+    "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" \
+      -e KSU -e KPM --disable KSU_DEBUG \
+      --disable KSU_SUSFS
+  fi
+}
+
+function disable_localversion_auto() {
+  "${KERNEL_DIR}/scripts/config" --file "${OUT_DIR}/.config" -d LOCALVERSION_AUTO
+}
+append_cmd POST_DEFCONFIG_CMDS disable_localversion_auto
+
+if [[ "${KERNEL_DIR}" == "./common" || "${KERNEL_DIR}" == "common" ]]; then
+  SKIP_IF_VERSION_MATCHES=
+  KMI_SYMBOL_LIST_STRICT_MODE=0
+  BUILD_GKI_CERTIFICATION_TOOLS=
+  append_cmd POST_DEFCONFIG_CMDS keep_gki_pstore_stock_config
+  append_cmd POST_DEFCONFIG_CMDS maybe_disable_btf_config
+  append_cmd POST_DEFCONFIG_CMDS keep_gki_module_crc_format_stock_config
+  append_cmd POST_DEFCONFIG_CMDS set_gki_logsk_config
+  append_cmd POST_DEFCONFIG_CMDS enable_gki_ksu_config
+else
+  # Propagate to the recursive GKI sub-build (build.sh reads SKIP_IF_VERSION_MATCHES).
+  SKIP_IF_VERSION_MATCHES=
+  export SKIP_IF_VERSION_MATCHES
+fi
+
+# Apply the same host overrides to the recursive GKI build.
+GKI_BUILD_CONFIG_FRAGMENT=build.config.local

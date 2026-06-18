@@ -13,6 +13,13 @@ Kernel.tar.gz
 Platform.tar.gz
 SM-A057F_15_Opensource.zip
 
+# Large prebuilts (>100MB) - GitHub limit
+kernel_platform/prebuilts/clang/
+kernel_platform/prebuilts/gcc/
+
+# Large kernel modules
+vendor_dlkm/extracted/lib/modules/*.ko
+
 # Artifacts
 *.img
 *.img.tar

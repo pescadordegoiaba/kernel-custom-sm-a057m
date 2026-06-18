@@ -1,0 +1,34 @@
+# Build outputs
+out/
+*.log
+*.log.*
+
+# Build intermediates
+.build_root/
+kernel_platform/out/
+kernel_platform/common/out/
+
+# Large archives (>200MB)
+Kernel.tar.gz
+Platform.tar.gz
+SM-A057F_15_Opensource.zip
+
+# Artifacts
+*.img
+*.img.tar
+*.tar.md5
+*.zip
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Local config
+.env
+local.conf

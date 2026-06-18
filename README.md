@@ -25,7 +25,63 @@ Custom kernel build para Samsung Galaxy A05s baseado no firmware `A057MUBSADYG1`
 - `scripts/` — Scripts de build, audit, deploy
 - `out/` — Build artifacts
 
-## Build Rápido
+## Pré-requisitos e Dependências
+
+### Sistema Operacional
+- **Linux x86_64** (testado em Manjaro/Arch Linux)
+- **Não suporta Windows ou macOS** sem WSL/VM
+
+### Ferramentas Necessárias
+
+**Toolchain (já incluída no repo, mas parcialmente removida do GitHub):**
+- Clang r450784e (`kernel_platform/prebuilts/clang/host/linux-x86/clang-r450784e/`)
+- GCC local (`kernel_platform/gcc/`)
+- `kernel_platform/local-tools/` (scripts auxiliares)
+
+> ⚠️ **NOTA IMPORTANTE:** Alguns arquivos da toolchain excedem 50MB e foram removidos do repositório GitHub.
+> Você precisará baixar a toolchain completa separadamente ou restaurar de backup local.
+
+**Pacotes do sistema (Linux):**
+```bash
+# Arch Linux / Manjaro
+sudo pacman -S base-devel git rsync python perl openssl
+
+# Ubuntu / Debian
+sudo apt install build-essential git rsync python3 perl libssl-dev
+```
+
+### Arquivos Adicionais Necessários
+
+**1. Imagens stock do firmware (OBRIGATÓRIO para flash):**
+```bash
+# Extrair do firmware oficial SM-A057MUBSADYG1
+kernel_imgs/FILESKERNEL/boot.img
+kernel_imgs/FILESKERNEL/vendor_boot.img
+kernel_imgs/FILESKERNEL/init_boot.img  # recomendado
+```
+
+**2. KernelSU (submódulo):**
+```bash
+git submodule update --init --recursive
+```
+
+**3. Toolchain completa (se faltando do repo):**
+- Baixe do Android Source ou restore de backup local
+- Coloque em: `kernel_platform/prebuilts/clang/host/linux-x86/clang-r450784e/`
+
+### Verificação de Dependências
+
+Antes de buildar, execute:
+```bash
+# Verificar toolchain
+ls -la kernel_platform/prebuilts/clang/host/linux-x86/clang-r450784e/bin/clang
+
+# Verificar imagens stock
+ls -la kernel_imgs/FILESKERNEL/{boot,vendor_boot,init_boot}.img
+
+# Verificar submódulos
+git submodule status
+```
 
 ```bash
 cd "/home/gullin/Downloads/Kernel A15"

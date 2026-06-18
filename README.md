@@ -1,5 +1,11 @@
 # Kernel Custom Samsung Galaxy A05s (SM-A057M)
 
+> ⚠️ **STATUS ATUAL: INSTÁVEL / EM DESENVOLVIMENTO** ⚠️
+> 
+> Este repositório contém código em andamento com **bugs conhecidos** e **não está pronto para produção**.
+> A source **não está inicializando** corretamente em testes recentes.
+> Use por sua conta e risco — apenas para desenvolvimento e debugging.
+
 Custom kernel build para Samsung Galaxy A05s baseado no firmware `A057MUBSADYG1`, plataforma Qualcomm sm6225/khaje/m269.
 
 ## Features
